@@ -68,7 +68,7 @@ function HeroSection() {
                         <a
                             key={link}
                             href="#"
-                            className="text-[16px] text-[#C3C3C6] font-['Averia_Serif_Libre'] relative inline-block transition-all duration-300 ease-in-out hover:text-[#FFB74D]"
+                            className="text-[16px] text-[#C3C3C6] font-['Averia_Serif_Libre'] relative inline-block transition-all duration-300 ease-in-out hover:text-[#FFB74D] after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-[#FFB74D] after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
                             onClick={() => setMenuOpen(false)}
                         >
                             {link}
