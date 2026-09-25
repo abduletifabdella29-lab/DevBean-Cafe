@@ -91,11 +91,11 @@ function HeroSection() {
                 <p className="text-[#D7C6B9] text-[24px] font-['Averia_Serif_Libre'] mt-4 leading-[1.2]">Discover the taste of home with our handcrafted pastries, <br /> artisan breads, and freshly brewed coffee. Order online or <br /> visit us to experience the magic.</p>
 
                 <div>
-                    <button className="bg-[#FFB74D] text-black rounded-full text-[16px] font-['Averia_Serif_Libre'] mt-8  w-27.25 h-12.75">
+                    <button className="bg-[#FFB74D] text-black rounded-full text-[16px] font-['Averia_Serif_Libre'] mt-8 hover:bg-[#6F4E37]  hover:text-white transition-all duration-300 ease-in-out w-27.25 h-12.75">
                         Order Now
                     </button>
 
-                    <button className="bg-transparent border-2 border-[#E3983E] text-[#E3983E] rounded-full text-[16px] font-['Averia_Serif_Libre'] mt-8 ml-4 w-33.75 h-12.75 ">
+                    <button className="bg-transparent border-2 border-[#E3983E] text-[#E3983E] rounded-full text-[16px] font-['Averia_Serif_Libre'] mt-8 ml-4 hover:bg-[#6F4E37] hover:text-white hover:border-[#6F4E37] transition-all duration-300 ease-in-out w-33.75 h-12.75 ">
                         Explore Menu
                     </button>
                 </div>
