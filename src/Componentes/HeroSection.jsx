@@ -18,6 +18,7 @@ function HeroSection() {
                 minHeight: "100vh",
             }}
         >
+            {/* nav section */}
             <div className="px-4 sm:px-8 lg:px-20 py-2 flex items-center justify-between relative">
                 {/* Logo */}
                 <div>
@@ -77,6 +78,25 @@ function HeroSection() {
 
                     <button className="border border-red-600 rounded-full px-5 py-2 text-red-600 text-[13px] font-serif tracking-wide bg-transparent hover:bg-red-600 hover:text-white transition-all duration-300 ease-in-out">
                         LOGOUT
+                    </button>
+                </div>
+            </div>
+
+            {/* hero content */}
+            <div className="pt-25.75 ml-20">
+                <h2 className="text-white text-[54px] font-['DM_Serif_Display']">Dev<span className="text-[#8B6B5E]">Bean</span></h2>
+                
+                <p className="text-[#D7C6B9] text-[20px] font-['Averia_Serif_Libre']">Every Bean, Every Bite, Made to Delight.</p>
+
+                <p className="text-[#D7C6B9] text-[24px] font-['Averia_Serif_Libre'] mt-4 leading-[1.2]">Discover the taste of home with our handcrafted pastries, <br /> artisan breads, and freshly brewed coffee. Order online or <br /> visit us to experience the magic.</p>
+
+                <div>
+                    <button className="bg-[#FFB74D] text-black rounded-full text-[16px] font-['Averia_Serif_Libre'] mt-8  w-27.25 h-12.75">
+                        Order Now
+                    </button>
+
+                    <button className="bg-transparent border-2 border-[#E3983E] text-[#E3983E] rounded-full text-[16px] font-['Averia_Serif_Libre'] mt-8 ml-4 w-33.75 h-12.75 ">
+                        Explore Menu
                     </button>
                 </div>
             </div>
