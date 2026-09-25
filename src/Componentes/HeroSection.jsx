@@ -61,8 +61,8 @@ function HeroSection() {
                 {/* Mobile dropdown menu */}
                 <div
                     className={`lg:hidden md:hidden absolute top-full left-0 w-full bg-black/80 backdrop-blur-sm flex flex-col items-center gap-6 py-8 transition-all duration-300 ease-in-out ${menuOpen
-                            ? "opacity-100 translate-y-0 pointer-events-auto"
-                            : "opacity-0 -translate-y-4 pointer-events-none"
+                        ? "opacity-100 translate-y-0 pointer-events-auto"
+                        : "opacity-0 -translate-y-4 pointer-events-none"
                         }`}
                 >
                     {navLinks.map((link) => (
@@ -83,19 +83,25 @@ function HeroSection() {
             </div>
 
             {/* hero content */}
-            <div className="pt-25.75 ml-20">
-                <h2 className="text-white text-[54px] font-['DM_Serif_Display']">Dev<span className="text-[#8B6B5E]">Bean</span></h2>
-                
-                <p className="text-[#D7C6B9] text-[20px] font-['Averia_Serif_Libre']">Every Bean, Every Bite, Made to Delight.</p>
+            <div className="pt-12 sm:pt-20 lg:pt-25.75 px-6 sm:px-10 lg:ml-20">
+                <h2 className="text-white text-4xl sm:text-5xl lg:text-[54px] font-['DM_Serif_Display']">
+                    Dev<span className="text-[#8B6B5E]">Bean</span>
+                </h2>
 
-                <p className="text-[#D7C6B9] text-[24px] font-['Averia_Serif_Libre'] mt-4 leading-[1.2]">Discover the taste of home with our handcrafted pastries, <br /> artisan breads, and freshly brewed coffee. Order online or <br /> visit us to experience the magic.</p>
+                <p className="text-[#D7C6B9] text-lg sm:text-[20px] font-['Averia_Serif_Libre'] mt-1">
+                    Every Bean, Every Bite, Made to Delight.
+                </p>
 
-                <div>
-                    <button className="bg-[#FFB74D] text-black rounded-full text-[16px] font-['Averia_Serif_Libre'] mt-8 hover:bg-[#6F4E37]  hover:text-white transition-all duration-300 ease-in-out w-27.25 h-12.75">
+                <p className="text-[#D7C6B9] text-xl sm:text-[24px] font-['Averia_Serif_Libre'] mt-4 leading-[1.3] max-w-xl">
+                    Discover the taste of home with our handcrafted pastries, artisan breads, and freshly brewed coffee. Order online or visit us to experience the magic.
+                </p>
+
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-8">
+                    <button className="bg-[#FFB74D] text-black rounded-full text-[16px] font-['Averia_Serif_Libre'] hover:bg-[#6F4E37] hover:text-white transition-all duration-300 ease-in-out px-8 py-3.5">
                         Order Now
                     </button>
 
-                    <button className="bg-transparent border-2 border-[#E3983E] text-[#E3983E] rounded-full text-[16px] font-['Averia_Serif_Libre'] mt-8 ml-4 hover:bg-[#6F4E37] hover:text-white hover:border-[#6F4E37] transition-all duration-300 ease-in-out w-33.75 h-12.75 ">
+                    <button className="bg-transparent border-2 border-[#E3983E] text-[#E3983E] rounded-full text-[16px] font-['Averia_Serif_Libre'] hover:bg-[#6F4E37] hover:text-white hover:border-[#6F4E37] transition-all duration-300 ease-in-out px-8 py-3.5">
                         Explore Menu
                     </button>
                 </div>
