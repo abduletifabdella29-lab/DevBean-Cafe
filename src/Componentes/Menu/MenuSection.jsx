@@ -4,7 +4,7 @@ import { MenuItems } from './MenuData.js';
 
 function MenuCard({ image, title, price, category, description }) {
     return (
-        <div>
+        <div className="transition duration-400 ease-in-out hover:-translate-y-2 hover:shadow-xl'">
             <img src={image} alt={title} />
             <div className="h-32 rounded-b-md" style={{ backgroundColor: '#F5EBE0' }}>
                 <h3 className='text-[#5A4D41] font-["DM_Serif_Text"] text-[24px] text-center py-3'>{title} <span className='text-[#A37B67] pl-1'>{price}</span></h3>
