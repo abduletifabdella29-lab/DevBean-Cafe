@@ -1,9 +1,11 @@
 import React from 'react'
 
 function CustomerFavouritesSection() {
-  return (
-    <div>CustomerFavouritesSection</div>
-  )
+    return (
+        <div className="bg-[#121212] ">
+            
+        </div>
+    )
 }
 
 export default CustomerFavouritesSection
