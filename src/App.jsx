@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroSection from './Componentes/HeroSection'
 import MenuSection from './Componentes/Menu/MenuSection.jsx'
-import CustomerFavouritesSection from './Componentes/CustomerFavouritesSection/CustomerFavouritesSection.jsx'
+import CustomerFavouritesSection from "./Componentes/CustomerFavouritesSection/CustomersFavouritesSection.jsx";
 
 function App() {
   return (
