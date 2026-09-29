@@ -4,34 +4,29 @@ import { CustomerFavouritesItems } from "./CustomerFavouritesData.js";
 
 function CustomerFavouritesCard({ image, title, price, rating, description }) {
     return (
-        <div className="transition duration-400 ease-in-out hover:-translate-y-2 hover:shadow-xl rounded-md overflow-hidden flex flex-col h-full">
-            <div className="transition duration-400 ease-in-out hover:-translate-y-2 hover:shadow-xl rounded-md overflow-hidden flex flex-col h-full">
-                <div className="w-full h-48 overflow-hidden bg-white">
-                    <img src={image} alt={title} className="w-full h-full object-cover" />
+        <div className="transition duration-400 ease-in-out hover:-translate-y-2 hover:shadow-xl rounded-md overflow-hidden flex flex-col">
+
+            <img src={image} alt={title} className="w-full h-auto object-cover" />
+
+            <div className="h-36 rounded-b-md p-4" style={{ backgroundColor: "#3E2723" }}>
+                <h3 className='text-[#D7C6B9] font-["DM_Serif_Text"] text-[20px] text-center'>
+                    {title} <span className="text-[#E3983E] pl-1 lg:pl-3">{price}</span>
+                </h3>
+
+                <div className="flex items-center justify-left gap-1 pt-1 ">
+                    <button>
+                        <CiStar className="text-[#E7B504] w-[16.55px] h-[15.87px]" />
+                    </button>
+
+                    <span className="text-[#D7C6B9] text-[14px] font-semibold">
+                        {rating}
+                    </span>
                 </div>
 
-                <div
-                    className="h-36 rounded-b-md p-4"
-                    style={{ backgroundColor: "#3E2723" }}
-                >
-                    <h3 className='text-[#D7C6B9] font-["DM_Serif_Text"] text-[20px] text-center'>
-                        {title} <span className="text-[#E3983E] pl-1 lg:pl-3">{price}</span>
-                    </h3>
-
-                    <div className="flex items-center justify-left gap-1 pt-1 ">
-                        <button>
-                            <CiStar className="text-[#E7B504] w-[16.55px] h-[15.87px]" />
-                        </button>
-                        <span className="text-[#D7C6B9] text-[14px] font-semibold">
-                            {rating}
-                        </span>
-                    </div>
-
-                    <p
-                        className="text-[#D7C6B9] text-[16px] font-['Averia_Serif_Libre'] leading-4.5 text-left  pt-1"
-                        dangerouslySetInnerHTML={{ __html: description }}
-                    ></p>
-                </div>
+                <p
+                    className="text-[#D7C6B9] text-[16px] font-['Averia_Serif_Libre'] leading-4.5 text-left  pt-1"
+                    dangerouslySetInnerHTML={{ __html: description }}
+                ></p>
             </div>
         </div>
     );
