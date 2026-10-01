@@ -9,7 +9,7 @@ function CustomerFavouritesCard({ image, title, price, rating, description }) {
             <img src={image} alt={title} className="w-full h-auto object-cover" />
 
             <div className="h-36 rounded-b-md p-4" style={{ backgroundColor: "#3E2723" }}>
-                <h3 className='text-[#D7C6B9] font-["DM_Serif_Text"] text-[20px] text-center'>
+                <h3 className='text-[#D7C6B9] font-["DM_Serif_Text"] text-[20px] text-center font-bold'>
                     {title} <span className="text-[#E3983E] pl-1 lg:pl-3">{price}</span>
                 </h3>
 

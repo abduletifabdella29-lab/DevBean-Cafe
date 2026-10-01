@@ -4,7 +4,7 @@ import aboutimg from "../assets/Images/about-img.png";
 export default function AboutUsSection() {
     return (
         <section className="w-full bg-[#3E2723] px-5 py-10 font-['Literata',Georgia,serif] sm:px-8 md:px-12 md:py-12 lg:px-16">
-            <h2 className="mb-8 text-center text-[32px] font-[DM_Serif_Text] text-[#D7C6B9] md:mb-7">
+            <h2 className="mb-8 text-center text-[32px] font-[DM_Serif_Text] font-bold text-[#D7C6B9] md:mb-7">
                 About Us
             </h2>
 

@@ -12,7 +12,7 @@ function MenuCard({ image, title, price, category, description }) {
             />
 
             <div className="w-full min-h-32 bg-[#F5EBE0]">
-                <h3 className='text-[#5A4D41] font-["DM_Serif_Text"] text-[24px] text-center py-3'>{title} <span className='text-[#A37B67] pl-1'>{price}</span></h3>
+                <h3 className='text-[#5A4D41] font-["DM_Serif_Text"] font-bold text-[24px] text-center py-3'>{title} <span className='text-[#A37B67] pl-1'>{price}</span></h3>
                 <p className="text-[#A37B67] text-[12px] font-['DM_Serif_Text'] pl-6 ">{category}</p>
                 <p className="text-[#A37B67] text-[14px] font-['DM_Serif_Text'] pl-6 pt-2">{description}</p>
             </div>
