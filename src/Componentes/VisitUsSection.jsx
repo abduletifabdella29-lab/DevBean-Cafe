@@ -2,7 +2,7 @@ import React from 'react'
 
 function VisitUsSection() {
     return (
-        <div>VisitUsSection</div>
+        <div className='bg-[#121212]'>VisitUsSection</div>
     )
 }
 
