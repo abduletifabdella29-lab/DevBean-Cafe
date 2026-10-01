@@ -1,4 +1,5 @@
 import React from 'react'
+import aboutimg from '../assets/Images/about-img.png'
 
 function AboutUsSection() {
     return (
