@@ -1,4 +1,5 @@
 import React from "react";
+import { FiMapPin } from "react-icons/fi";
 
 function VisitUsSection() {
     return (
@@ -39,10 +40,18 @@ function VisitUsSection() {
                 </div>
             </div>
 
-            <div className="pt-10">
-                <button></button>
+            <div className="flex h-16 items-center justify-center mt-12 pb-25">
+                <a
+                    href="https://maps.google.com/?q=Building+Street+Name+Locality+City"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-[0.4em] rounded-full bg-[#FFB74D] px-4 py-2 text-[16px] text-[#121212] font-[Averia_Serif_Libre] hover:bg-[#E3983E] hover:px-6 hover:py-3 transition-all duration-400"
+                >
+                    View on Map
+                    <FiMapPin className="text-black" size="1.5em" strokeWidth={2.5} />
+                </a>
             </div>
-        </div>
+        </div >
     );
 }
 
