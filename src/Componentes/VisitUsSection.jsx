@@ -45,7 +45,7 @@ function VisitUsSection() {
                     href="https://maps.google.com/?q=Building+Street+Name+Locality+City"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-[0.4em] rounded-full bg-[#FFB74D] px-4 py-2 text-[16px] text-[#121212] font-[Averia_Serif_Libre] hover:bg-[#E3983E] hover:px-6 hover:py-3 transition-all duration-400"
+                    className="inline-flex items-center gap-[0.4em] rounded-full bg-[#FFB74D] px-4 py-2 text-[16px] text-[#121212] font-[Averia_Serif_Libre] shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E3983E] hover:shadow-lg"
                 >
                     View on Map
                     <FiMapPin className="text-black" size="1.5em" strokeWidth={2.5} />
