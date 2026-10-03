@@ -37,7 +37,7 @@ function FollowUsSection({ posts = FollowUsSectionData }) {
                     <a
                         href='#'
                         rel="noopener noreferrer"
-                        className='inline-flex items-center gap-[0.4em] rounded-full bg-[#FFB74D] px-5 py-3 text-[16px] text-[#121212] font-[Averia_Serif_Libre] hover:bg-[#E3983E] hover:scale-105 transition-all duration-400'
+                        className='inline-flex items-center gap-[0.4em] rounded-full bg-[#FFB74D] px-5 py-3 text-[16px] text-[#121212] font-[Averia_Serif_Libre] shadow-md transition-all duration-400 hover:-translate-y-0.5 hover:bg-[#E3983E] hover:shadow-lg'
                     >
                         Follow on Instagram
                         <FaInstagram className='text-xl' />
