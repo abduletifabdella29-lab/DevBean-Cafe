@@ -1,4 +1,5 @@
 import React from "react";
+import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
 
 const quickLinks = ["Menu", "About", "Contact", "Gallery", "Best Sellers"];
 
