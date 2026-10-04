@@ -92,6 +92,9 @@ export default function Footer() {
                         </form>
                     </div>
 
+                    {/* Divider line */}
+                    <div className="mx-12 w-[1146.03px] mt- border-t border-[#3E2723]" />
+
                 </div>
             </div>
         </footer>
