@@ -17,6 +17,14 @@ const contact = [
     { label: "support@devbean.cafe", href: "support@devbean.cafe" },
 ];
 
+const socials = [
+    { icon: FaInstagram, href: "#", label: "Instagram" },
+    { icon: FaFacebookF, href: "#", label: "Facebook" },
+    { icon: FaTwitter, href: "#", label: "Twitter" },
+];
+
+const legal = ["Privacy Policy", "Terms & Conditions"];
+
 export default function Footer() {
     return (
         <footer className="bg-[#111] text-[#D7C6B9] font-serif">
@@ -93,9 +101,44 @@ export default function Footer() {
                         </form>
                     </div>
 
-                    {/* Divider line */}
-                    <div className="mx-12 w-[1146.03px] mt- border-t border-[#3E2723]" />
+                    {/* Divider + bottom bar wrapper */}
+                    <div className="ml-12 w-[1146.03px]">
 
+                        {/* Divider line */}
+                        <div className="mt-1 border-t border-[#3E2723]" />
+
+                        {/* Bottom bar */}
+                        <div className="mt-10 flex items-center justify-between font-[DM_Serif_Text]">
+                            {/* Social icons */}
+                            <ul className="flex items-center gap-5 pl-3 text-[20px]">
+                                {socials.map(({ icon: Icon, href, label }) => (
+                                    <li key={label}>
+                                        <a
+                                            href={href}
+                                            aria-label={label}
+                                            className="hover:text-[#E3983E] transition-colors"
+                                        >
+                                            <Icon />
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+
+                            {/* Copyright + legal */}
+                            <div className="text-right pr-4">
+                                <p className="text-[16px] mb-2">© 2026 Dev Bean. all rights reserved.</p>
+                                <ul className="flex justify-end gap-4 text-[14px]">
+                                    {legal.map((item) => (
+                                        <li key={item}>
+                                            <a href="#" className="hover:text-[#E3983E] transition-colors">
+                                                {item}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
