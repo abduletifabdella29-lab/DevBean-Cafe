@@ -5,6 +5,7 @@ import CustomerFavouritesSection from "./Componentes/CustomerFavouritesSection/C
 import AboutUsSection from './Componentes/AboutUsSection.jsx';
 import VisitUsSection from './Componentes/VisitUsSection.jsx';
 import FollowUsSection from './Componentes/FollowUs/FollowUsSection.jsx';
+import Footer from './Componentes/Footer.jsx';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <AboutUsSection />
       <VisitUsSection />
       <FollowUsSection />
+      <Footer />
     </div>
   )
 }
