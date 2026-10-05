@@ -66,7 +66,7 @@ export const products = [
     {
         id: 7,
         name: 'Veggie Sandwich',
-        description: 'Fresh vegetables, cheese and herb spread on toasted bread.',
+        description: 'Fresh veggies, cheese, and herbs on toasted bread.',
         price: 180,
         image: shopImage,
         category: 'Savory',
