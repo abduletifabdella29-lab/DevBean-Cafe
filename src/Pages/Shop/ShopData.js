@@ -16,7 +16,7 @@ export const products = [
         name: 'Blueberry Cheesecake',
         description: 'Creamy cheesecake topped with blueberry compote.',
         price: 240,
-        image: 'shopImage',
+        image: shopImage,
         category: 'Desserts',
     },
     {
@@ -24,7 +24,7 @@ export const products = [
         name: 'Chocolate Brownie',
         description: 'Fudgy brownie with rich dark chocolate chunks.',
         price: 150,
-        image: 'shopImage',
+        image: shopImage,
         category: 'Desserts',
     },
     {
@@ -32,7 +32,7 @@ export const products = [
         name: 'Tiramisu Cup',
         description: 'Coffee-soaked layers with mascarpone cream.',
         price: 220,
-        image: 'shopImage',
+        image: shopImage,
         category: 'Desserts',
     },
 
@@ -42,7 +42,7 @@ export const products = [
         name: 'Butter Croissant',
         description: 'Buttery, flaky and freshly baked every morning.',
         price: 120,
-        image: 'shopImage',
+        image: shopImage,
         category: 'Baked Goods',
     },
     {
@@ -50,7 +50,7 @@ export const products = [
         name: 'Cinnamon Roll',
         description: 'Soft roll swirled with cinnamon and sweet glaze.',
         price: 140,
-        image: 'shopImage',
+        image: shopImage,
         category: 'Baked Goods',
     },
 
@@ -60,7 +60,7 @@ export const products = [
         name: 'Cheese Puff',
         description: 'Crispy pastry filled with melted cheese.',
         price: 110,
-        image: 'shopImage',
+        image: shopImage,
         category: 'Savory',
     },
     {
@@ -68,7 +68,7 @@ export const products = [
         name: 'Veggie Sandwich',
         description: 'Fresh vegetables, cheese and herb spread on toasted bread.',
         price: 180,
-        image: 'shopImage',
+        image: shopImage,
         category: 'Savory',
     },
 
@@ -78,7 +78,7 @@ export const products = [
         name: 'Butter Cookies Box',
         description: 'A box of crunchy homemade butter cookies.',
         price: 300,
-        image: 'shopImage',
+        image: shopImage,
         category: 'Packed Items',
     },
     {
@@ -86,7 +86,7 @@ export const products = [
         name: 'Granola Jar',
         description: 'Crunchy oats, honey and roasted nuts in a jar.',
         price: 350,
-        image: 'shopImage',
+        image: shopImage,
         category: 'Packed Items',
     },
 
@@ -96,7 +96,7 @@ export const products = [
         name: 'Fruit Salad Bowl',
         description: 'Seasonal fresh fruits with a touch of honey.',
         price: 160,
-        image: 'shopImage',
+        image: shopImage,
         category: 'Healthy',
     },
     {
@@ -104,7 +104,7 @@ export const products = [
         name: 'Oat Energy Bar',
         description: 'Oats, dates and seeds with no added sugar.',
         price: 90,
-        image: 'shopImage   ',
+        image: shopImage,
         category: 'Healthy',
     },
     {
@@ -112,7 +112,7 @@ export const products = [
         name: 'Greek Yogurt Parfait',
         description: 'Yogurt layered with berries and crunchy granola.',
         price: 190,
-        image: 'shopImage',
+        image: shopImage,
         category: 'Healthy',
     },
 ];
