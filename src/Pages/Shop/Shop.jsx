@@ -5,7 +5,7 @@ import Navbar from '../../Componentes/Navbar.jsx';
 
 export default function Shop() {
 
-    const [active, setActive] = useState('All');
+    const [active, setActive] = useState('🍽️ All');
 
     const filtered =
         active === '🍽️ All' ? products : products.filter((p) => p.category === active)
