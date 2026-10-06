@@ -13,14 +13,14 @@ export default function Shop() {
     return (
         <div className="bg-[#121212] min-h-screen">
             <Navbar />
-            <main className="bg-[#121212] min-h-screen px-12 py-8">
+            <main className="bg-[#121212] min-h-screen px-12 py-4">
                 {/* ---------- Category pills ---------- */}
                 <div className="flex justify-center flex-wrap gap-3 mb-8">
                     {categories.map((cat) => (
                         <button
                             key={cat}
                             onClick={() => setActive(cat)}
-                            className={`px-4 py-2 rounded-full text-center font-['DM_Serif_Text'] transition ${active === cat
+                            className={`px-4 py-2 rounded-full text-center text-[18px] font-['DM_Serif_Text'] transition ${active === cat
                                     ? 'bg-[#FFB74D] text-black'
                                     : 'bg-[#E8DDD3] text-black hover:bg-[#FFB74D] duration-300'
                                 }`}
