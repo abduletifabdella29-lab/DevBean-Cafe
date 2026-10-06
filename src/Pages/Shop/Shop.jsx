@@ -20,9 +20,9 @@ export default function Shop() {
                         <button
                             key={cat}
                             onClick={() => setActive(cat)}
-                            className={`px-4 py-2 rounded-full text-center font-['Averia_Serif_Libre'] transition ${active === cat
+                            className={`px-4 py-2 rounded-full text-center font-['DM_Serif_Text'] transition ${active === cat
                                     ? 'bg-[#FFB74D] text-black'
-                                    : 'bg-[#E8DDD3] text-black hover:bg-[#FFB74D]'
+                                    : 'bg-[#E8DDD3] text-black hover:bg-[#FFB74D] duration-300'
                                 }`}
                         >
                             {cat}
