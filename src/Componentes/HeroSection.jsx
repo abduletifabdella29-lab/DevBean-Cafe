@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { HiX } from "react-icons/hi";
 import { RiMenu3Fill } from "react-icons/ri";
 import banner from "../assets/Images/banner.png";
@@ -7,7 +8,20 @@ import logo from "../assets/Icons/logo 1.png";
 function HeroSection() {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const navLinks = ["SHOP", "MENU", "CART", "ORDERS", "PROFILE"];
+    const navLinks = [
+        { label: "SHOP", to: "/shop" },
+        { label: "MENU", to: "/menu"},
+        { label: "CART", to: "/cart"},
+        { label: "ORDERS", to: "/orders" },
+        { label: "PROFILE", to: "/profile" },
+    ]
+
+    const baseClass="text-[16px] text-[#C3C3C6] font-['Averia_Serif_Libre'] relative inline-block transition-all duration-300 ease-in-out hover:text-[#FFB74D] after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-[#FFB74D] after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
+
+    const getLinkClass = ({isActive}) => 
+    `${baseClass} ${
+        isActive ? "text-[#FFB74D]" : "text-[#C3C3C6] after:w-0"
+    }`;
 
     return (
         <div
@@ -21,24 +35,27 @@ function HeroSection() {
             {/* nav section */}
             <div className="px-4 sm:px-8 lg:px-20 py-2 flex items-center justify-between relative">
                 {/* Logo */}
-                <div>
-                    <img
-                        src={logo}
-                        style={{ width: "56px", height: "56px" }}
-                        alt="Logo"
-                    />
-                </div>
+                <Link to={"/"}>
+                    <div>
+                        <img
+                            src={logo}
+                            style={{ width: "56px", height: "56px" }}
+                            alt="Logo"
+                        />
+                    </div>
+                </Link>
 
                 {/* Desktop nav */}
                 <div className="hidden lg:flex md:flex space-x-4 ml-auto justify-between items-center gap-4">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link}
-                            href="#"
-                            className="text-[16px] text-[#C3C3C6] font-['Averia_Serif_Libre'] relative inline-block transition-all duration-300 ease-in-out hover:text-[#FFB74D] after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-[#FFB74D] after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
+                    {navLinks.map(({label, to}) => (
+                        <NavLink
+                            key={label}
+                            to={to}
+                            end={to === "/"}
+                            className={getLinkClass}
                         >
-                            {link}
-                        </a>
+                            {label}
+                        </NavLink>
                     ))}
 
                     <button className="border border-red-600 rounded-full px-5 py-2 text-red-600 text-[13px] font-serif tracking-wide bg-transparent hover:bg-red-600 hover:text-white hover:shadow-[0_0_15px_rgba(220,38,38,0.4)] transition-all duration-300 ease-in-out">
@@ -65,15 +82,16 @@ function HeroSection() {
                         : "opacity-0 -translate-y-4 pointer-events-none"
                         }`}
                 >
-                    {navLinks.map((link) => (
-                        <a
-                            key={link}
-                            href="#"
-                            className="text-[16px] text-[#C3C3C6] font-['Averia_Serif_Libre'] relative inline-block transition-all duration-300 ease-in-out hover:text-[#FFB74D] after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-[#FFB74D] after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
+                    {navLinks.map(({label, to}) => (
+                        <NavLink
+                            key={label}
+                            to={to}
+                            end={to === "/"}
+                            className={getLinkClass}
                             onClick={() => setMenuOpen(false)}
                         >
-                            {link}
-                        </a>
+                            {label}
+                        </NavLink>
                     ))}
 
                     <button className="border border-red-600 rounded-full px-5 py-2 text-red-600 text-[13px] font-serif tracking-wide bg-transparent hover:bg-red-600 hover:text-white transition-all duration-300 ease-in-out">
