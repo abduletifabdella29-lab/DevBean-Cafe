@@ -8,7 +8,7 @@ export default function Shop() {
     const [active, setActive] = useState('All');
 
     const filtered =
-        active === 'All' ? products : products.filter((p) => p.category === active)
+        active === '🍽️ All' ? products : products.filter((p) => p.category === active)
 
     return (
         <div className="bg-[#121212] min-h-screen">
@@ -20,7 +20,7 @@ export default function Shop() {
                         <button
                             key={cat}
                             onClick={() => setActive(cat)}
-                            className={`px-4 py-2 rounded-full font-['Averia_Serif_Libre'] transition ${active === cat
+                            className={`px-4 py-2 rounded-full text-center font-['Averia_Serif_Libre'] transition ${active === cat
                                     ? 'bg-[#FFB74D] text-black'
                                     : 'bg-[#E8DDD3] text-black hover:bg-[#FFB74D]'
                                 }`}
