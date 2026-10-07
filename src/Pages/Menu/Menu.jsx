@@ -9,7 +9,6 @@ export default function Menu() {
     active === "All" ? menuItems : menuItems.filter((item) => item.category === active );
 
     return (
-        <div className="bg-[#121212] min-h-screen">
             <main className="px-12 py-4">
                 {/* ---------- Category pills ---------- */}
                 <div className="flex justify-center flex-wrap gap-3 mb-8">
@@ -71,6 +70,5 @@ export default function Menu() {
                     ))}
                 </div>
             </main>
-        </div>
     )
 }
