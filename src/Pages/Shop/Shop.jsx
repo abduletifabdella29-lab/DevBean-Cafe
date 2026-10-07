@@ -4,26 +4,26 @@ import { categories, products } from './ShopData.js'
 
 export default function Shop() {
 
-    const [active, setActive] = useState('🍽️ All');
+    const [active, setActive] = useState('All');
 
     const filtered =
-        active === '🍽️ All' ? products : products.filter((p) => p.category === active)
+        active === 'All' ? products : products.filter((p) => p.category === active)
 
     return (
-        <div className="bg-[#121212] min-h-screen">
-            <main className="bg-[#121212] min-h-screen px-12 py-4">
+            <main className="px-12 py-4">
                 {/* ---------- Category pills ---------- */}
                 <div className="flex justify-center flex-wrap gap-3 mb-8">
                     {categories.map((cat) => (
                         <button
-                            key={cat}
-                            onClick={() => setActive(cat)}
-                            className={`px-4 py-2 rounded-full text-center text-[18px] font-semibold font-['DM_Serif_Text'] transition ${active === cat
+                            key={cat.name}
+                            onClick={() => setActive(cat.name)}
+                            className={`px-4 py-2 rounded-full text-center text-[18px] font-semibold font-['DM_Serif_Text'] transition ${active === cat.name
                                     ? 'bg-[#FFB74D] text-black'
                                     : 'bg-[#E8DDD3] text-black hover:bg-[#FFB74D] duration-300'
                                 }`}
                         >
-                            {cat}
+                            <span className="mr-1">{cat.icon}</span>
+                            {cat.name}
                         </button>
                     ))}
                 </div>
@@ -65,6 +65,5 @@ export default function Shop() {
                     ))}
                 </div>
             </main>
-        </div>
     )
 }

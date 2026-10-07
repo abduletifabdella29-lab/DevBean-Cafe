@@ -1,12 +1,12 @@
 import shopImage from '../../assets/Images/shopimg.png';
 
 export const categories = [
-    '🍽️ All',
-    '🍫 Packed Items',
-    '🍰 Baked Goods',
-    '🥪 Savory',
-    '🧁 Desserts',
-    '🥗 Healthy',
+    { name: 'All', icon: '🍽️' },
+    { name: 'Packed Items', icon: '🍫' },
+    { name: 'Baked Goods', icon: '🍰' },
+    { name: 'Savory', icon: '🥪' },
+    { name: 'Desserts', icon: '🧁' },
+    { name: 'Healthy', icon: '🥗' },
 ]
 
 export const products = [
@@ -17,7 +17,7 @@ export const products = [
         description: 'Creamy cheesecake topped with blueberry compote.',
         price: 240,
         image: shopImage,
-        category: '🧁 Desserts',
+        category: 'Desserts',
     },
     {
         id: 2,
@@ -25,7 +25,7 @@ export const products = [
         description: 'Fudgy brownie with rich dark chocolate chunks.',
         price: 150,
         image: shopImage,
-        category: '🧁 Desserts',
+        category: 'Desserts',
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ export const products = [
         description: 'Coffee-soaked layers with mascarpone cream.',
         price: 220,
         image: shopImage,
-        category: '🧁 Desserts',
+        category: 'Desserts',
     },
 
     // ---------- Baked Goods ----------
@@ -43,7 +43,7 @@ export const products = [
         description: 'Buttery, flaky and freshly baked every morning.',
         price: 120,
         image: shopImage,
-        category: '🍰 Baked Goods',
+        category: 'Baked Goods',
     },
     {
         id: 5,
@@ -51,7 +51,7 @@ export const products = [
         description: 'Soft roll swirled with cinnamon and sweet glaze.',
         price: 140,
         image: shopImage,
-        category: '🍰 Baked Goods',
+        category: 'Baked Goods',
     },
 
     // ---------- Savory ----------
@@ -61,7 +61,7 @@ export const products = [
         description: 'Crispy pastry filled with melted cheese.',
         price: 110,
         image: shopImage,
-        category: '🥪 Savory',
+        category: 'Savory',
     },
     {
         id: 7,
@@ -69,7 +69,7 @@ export const products = [
         description: 'Fresh veggies, cheese, and herbs on toasted bread.',
         price: 180,
         image: shopImage,
-        category: '🥪 Savory',
+        category: 'Savory',
     },
 
     // ---------- Packed Items ----------
@@ -79,7 +79,7 @@ export const products = [
         description: 'A box of crunchy homemade butter cookies.',
         price: 300,
         image: shopImage,
-        category: '🍫 Packed Items',
+        category: 'Packed Items',
     },
     {
         id: 9,
@@ -87,7 +87,7 @@ export const products = [
         description: 'Crunchy oats, honey and roasted nuts in a jar.',
         price: 350,
         image: shopImage,
-        category: '🍫 Packed Items',
+        category: 'Packed Items',
     },
 
     // ---------- Healthy ----------
@@ -97,7 +97,7 @@ export const products = [
         description: 'Seasonal fresh fruits with a touch of honey.',
         price: 160,
         image: shopImage,
-        category: '🥗 Healthy',
+        category: 'Healthy',
     },
     {
         id: 11,
@@ -105,7 +105,7 @@ export const products = [
         description: 'Oats, dates and seeds with no added sugar.',
         price: 90,
         image: shopImage,
-        category: '🥗 Healthy',
+        category: 'Healthy',
     },
     {
         id: 12,
@@ -113,6 +113,6 @@ export const products = [
         description: 'Yogurt layered with berries and crunchy granola.',
         price: 190,
         image: shopImage,
-        category: '🥗 Healthy',
+        category: 'Healthy',
     },
 ];
