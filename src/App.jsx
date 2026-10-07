@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Layout from './Componentes/Layout.jsx'
 import Home from './Pages/Home.jsx'
 import Shop from './Pages/Shop/Shop.jsx'
+import Menu from './Pages/Menu/Menu.jsx'
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
 
             <Route element={<Layout />}>
                 <Route path="/Shop" element={<Shop />} />
+                <Route path="/Menu" element={<Menu />} />
             </Route>
         </Routes>
     )
