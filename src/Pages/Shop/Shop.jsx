@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
 import { categories, products } from './ShopData.js'
-import Navbar from '../../Componentes/Navbar.jsx';
 
 export default function Shop() {
 
@@ -12,7 +11,6 @@ export default function Shop() {
 
     return (
         <div className="bg-[#121212] min-h-screen">
-            <Navbar />
             <main className="bg-[#121212] min-h-screen px-12 py-4">
                 {/* ---------- Category pills ---------- */}
                 <div className="flex justify-center flex-wrap gap-3 mb-8">
