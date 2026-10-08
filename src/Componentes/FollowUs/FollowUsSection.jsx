@@ -10,7 +10,7 @@ function FollowUsSection({ posts = FollowUsSectionData }) {
                 <p className='text-[#D7C6B9] font-[DM_Serif_Text] text-center text-[16px] pt-4 pb-13'>Tag us in your coffee moments</p>
 
                 {/* Cards */}
-                <div className='mx-auto grid max-w-[1150px] grid-cols-2 gap-2 px-4 md:grid-cols-3 lg:grid-cols-6'>
+                <div className='mx-auto grid max-w-287.5 grid-cols-2 gap-2 px-4 md:grid-cols-3 lg:grid-cols-6'>
                     {posts.map((post) => (
                         <div key={post.id} className='overflow-hidden rounded-md bg-[#121212] transition-transform duration-400 hover:-translate-y-1'>
                             <div className='h-40 bg-[#1f1f1f]'>
