@@ -24,7 +24,7 @@ function FollowUsSection({ posts = FollowUsSectionData }) {
                                 </h3>
                                 <p className='text-[11px] text-neutral-400'>{post.tag}</p>
                                 <p className='flex items-center gap-1.5 text-[11px] text-[#f5a53a]'>
-                                    <button> <FaHeart size={12} className='text-red-500' /></button>
+                                    <button><FaHeart size={12} className='text-red-500' /></button>
                                     {post.likes} likes
                                 </p>
                             </div>
