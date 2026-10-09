@@ -65,9 +65,10 @@ export default function Shop() {
                                     Add to Cart
                                 </button>
 
-                                <button className="w-full mt-3 py-1.5 bg-[#FFB74D] text-black text-[13px] font-['Averia_Serif_Libre'] font-bold rounded cursor-pointer transition-all duration-300 hover:bg-[#ffa726]">
-                                    <Link to={`/product/${p.id}`}>Detail</Link>
-                                </button>
+                                <Link to={`/product/${p.id}`}
+                                    className="w-full mt-3 py-1.5 bg-[#FFB74D] text-black text-[13px] font-['Averia_Serif_Libre'] font-bold rounded cursor-pointer transition-all duration-300 hover:bg-[#ffa726] text-center">
+                                    Detail
+                                </Link>
                             </div>
                         </div>
                     ))}
