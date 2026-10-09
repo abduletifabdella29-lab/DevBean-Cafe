@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { categories, products } from './ShopData.js'
 
 export default function Shop() {
@@ -57,10 +58,17 @@ export default function Shop() {
                             <p className="text-[#D7C6B9] text-[14px] font-['Averia_Serif_Libre'] mt-2">
                                 ₹ {p.price}
                             </p>
+                            
+                            <div className='flex gap-1.5'>
+                                <button
+                                className="w-full mt-3 py-1.5 bg-[#FFB74D] text-black text-[13px] font-['Averia_Serif_Libre'] font-bold rounded cursor-pointer transition-all duration-300 hover:bg-[#ffa726]">
+                                    Add to Cart
+                                </button>
 
-                            <button className="w-full mt-3 py-1.5 bg-[#FFB74D] text-black text-[13px] font-['Averia_Serif_Libre'] font-bold rounded cursor-pointer transition-all duration-300 hover:bg-[#ffa726]">
-                                Add to Cart
-                            </button>
+                                <button className="w-full mt-3 py-1.5 bg-[#FFB74D] text-black text-[13px] font-['Averia_Serif_Libre'] font-bold rounded cursor-pointer transition-all duration-300 hover:bg-[#ffa726]">
+                                    <Link to={`/product/${p.id}`}>Detail</Link>
+                                </button>
+                            </div>
                         </div>
                     ))}
                 </div>
