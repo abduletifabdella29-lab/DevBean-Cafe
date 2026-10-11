@@ -4,6 +4,7 @@ import { products } from '../Shop/ShopData.js'
 import { reviews } from './DetailData.js'
 
 export default function Detail() {
+    
     // Read the product id from the URL
     const { id } = useParams()
 
