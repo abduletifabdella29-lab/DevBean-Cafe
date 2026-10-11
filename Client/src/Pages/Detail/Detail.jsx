@@ -130,11 +130,11 @@ export default function Detail() {
                 </h3>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                    <input
+                    {/* <input
                         type="text"
                         placeholder="Your name"
                         className="bg-[#2A2321] text-[#D7C6B9] text-[13px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none"
-                    />
+                    /> */}
 
                     <select
                         value={rating}
