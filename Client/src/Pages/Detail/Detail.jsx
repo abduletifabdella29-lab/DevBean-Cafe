@@ -4,32 +4,25 @@ import { products } from '../Shop/ShopData.js'
 import { reviews } from './DetailData.js'
 
 export default function Detail() {
-    // 1. id ከ URL
     const { id } = useParams()
-
-    // 2. ምርቱን መፈለግ
+    
     const product = products.find((p) => p.id === Number(id))
 
-    // 3. state (ከማንኛውም return በፊት)
     const [reviewList, setReviewList] = useState(reviews)
     const [rating, setRating] = useState('')
     const [comment, setComment] = useState('')
 
-    // 4. ምርቱ ካልተገኘ
     if (!product) {
     return <Navigate to="*" replace />
     }
 
-    // 5. ተዛማጅ ምርቶች
     const related = products.filter(
         (p) => p.category === product.category && p.id !== product.id
     )
 
-    // 6. አማካይ ደረጃ
     const total = reviewList.reduce((sum, r) => sum + r.rating, 0)
     const average = reviewList.length === 0 ? 0 : total / reviewList.length
 
-    // 7. review መላክ
     function handleSubmit(e) {
         e.preventDefault()
 
