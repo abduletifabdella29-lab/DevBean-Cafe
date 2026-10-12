@@ -15,7 +15,7 @@ app.get('/api/health', async (req, res) => {
         res.json({ ok: true, result: rows[0].result })
     } catch (err) {
         console.error(err)
-        res.status(500).json({ ok: false, message: 'Database connection failed' })
+        res.status(500).json({ ok: false, message: 'Database connection failed!!' })
     }
 })
 
