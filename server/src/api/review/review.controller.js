@@ -17,3 +17,32 @@ export async function getReviews(req, res) {
 
     res.json(reviews);
 } 
+
+export async function addReview(req, res) {
+    const body = req.body ?? {}
+
+    const productId = Number(body.productId)
+    const rating = Number(body.rating)
+    const name = typeof body.name === 'string' ? body.name.trim() : ""
+    const comment = typeof body.comment === 'string' ? body.comment.trim() : ""
+    
+    if (!Number.isInteger(productId) || productId < 1) {
+        throw badRequest ('productId must be a positive number')
+    }
+
+    if (name === '' || name.length > 100 ) {
+        throw badRequest ('name is required (max 100 characters)')
+    }
+
+    if (!Number.isInteger(rating) || rating < 1 || rating > 5) {
+        throw badRequest ('rating must be a whole number from 1 to 5')
+    }
+
+    if (comment === '' || comment.length > 1000 ) {
+        throw badRequest ('comment is required (max 1000 characters)')
+    }
+
+    const review = await createReview ({ productId, name, rating, comment })
+
+    res.status(201).json(review)
+}
