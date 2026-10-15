@@ -9,6 +9,7 @@ function HeroSection() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const navLinks = [
+        { label: "HOME", to: "/" },
         { label: "SHOP", to: "/shop" },
         { label: "MENU", to: "/menu"},
         { label: "CART", to: "/cart"},
