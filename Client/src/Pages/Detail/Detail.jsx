@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { products } from '../Shop/ShopData.js'
-import { reviews } from './DetailData.js'
+import { fetchReviews, postReview } from '../../api/ReviewApi.js'
 
 export default function Detail() {
     
