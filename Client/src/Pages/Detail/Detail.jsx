@@ -109,7 +109,7 @@ export default function Detail() {
                     {reviewList.map((r) => (
                         <div key={r.id} className="border-b border-white pb-3">
                             <div className="flex items-center gap-3">
-                                <h3 className="text-white text-[14px] font-['DM_Serif_Text'] font-bold">
+                                <h3 className="text-white text-[20px] font-['DM_Serif_Text'] font-bold">
                                     {r.name}
                                 </h3>
                                 <span className="text-[#FFB74D] text-[12px]">
@@ -117,7 +117,7 @@ export default function Detail() {
                                     {'☆'.repeat(5 - r.rating)}
                                 </span>
                             </div>
-                            <p className="text-[#D7C6B9] text-[13px] font-['DM_Serif_Text'] mt-1">
+                            <p className="text-[#D7C6B9] text-[14px] font-['DM_Serif_Text'] mt-1">
                                 {r.comment}
                             </p>
                         </div>
@@ -125,21 +125,24 @@ export default function Detail() {
                 </div>
 
                 {/* write a review */}
-                <h3 className="text-white text-[15px] font-['DM_Serif_Text'] mt-6 mb-3">
+                <h3 className="text-white text-[21px] font-['DM_Serif_Text'] mt-6 mb-3">
                     Write a Review
                 </h3>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                    {/* <input
+                    <input
                         type="text"
                         placeholder="Your name"
-                        className="bg-[#2A2321] text-[#D7C6B9] text-[13px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none"
-                    /> */}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                        className="bg-[#2A2321] placeholder:text-[#D7C6B9] text-[#D7C6B9] text-[16px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none"
+                    />
 
                     <select
                         value={rating}
-                        onChange={(e) => setRating(e.target.value)}
-                        className="bg-[#2A2321] text-[#D7C6B9] text-[13px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none"
+                        onChange={(e) => setRating(e.target.value)} 
+                        required
+                        className="bg-[#2A2321] text-[#D7C6B9] text-[16px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none"
                     >
                         <option value="">Select Rating</option>
                         <option value="5">5 - Excellent</option>
@@ -154,12 +157,13 @@ export default function Detail() {
                         placeholder="Write your review"
                         value={comment}
                         onChange={(e) => setComment(e.target.value)}
-                        className="bg-[#2A2321] text-[#D7C6B9] text-[13px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none resize-none"
+                        required
+                        className="bg-[#2A2321] placeholder:text-[#D7C6B9] text-[#D7C6B9] text-[13px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none resize-none"
                     />
 
                     <button
                         type="submit"
-                        className="self-start px-6 py-2 bg-[#FFB74D] text-black text-[13px] font-['DM_Serif_Text'] font-bold rounded cursor-pointer transition-all duration-300 hover:bg-[#ffa726]"
+                        className="self-start px-6 py-2 bg-[#FFB74D] text-black text-[16px] font-['DM_Serif_Text'] font-bold rounded cursor-pointer transition-all duration-300 hover:bg-[#ffa726]"
                     >
                         Submit Review
                     </button>
