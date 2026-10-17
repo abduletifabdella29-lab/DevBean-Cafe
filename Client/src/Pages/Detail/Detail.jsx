@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { products } from '../Shop/ShopData.js'
 import { fetchReviews, postReview } from '../../api/ReviewApi.js'
