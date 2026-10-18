@@ -5,16 +5,36 @@ import { fetchReviews, postReview } from '../../api/ReviewApi.js'
 
 export default function Detail() {
     
-    // Read the product id from the URL
     const { id } = useParams()
 
-    // Find the matching product
     const product = products.find((p) => p.id === Number(id))
 
-    // State (hooks must come before any return)
-    const [reviewList, setReviewList] = useState(reviews)
+    const [reviewList, setReviewList] = useState([])
+    const [name, setName] = useState('')
     const [rating, setRating] = useState('')
     const [comment, setComment] = useState('')
+    const [error, setError] = useState('')
+    const [submitting, setSubmitting] = useState(false)
+
+    // Load the reviews of this product from the database
+    useEffect(() => {
+        let ignore = false
+
+        async function loadReviews() {
+            try {
+                const data = await fetchReviews(id)
+                if (!ignore) setReviewList(data)
+            } catch (err) {
+                if (!ignore) setError(err.message)
+            }
+        }
+
+        loadReviews()
+
+        return () => {
+            ignore = true
+        }
+    }, [id])
 
     // Redirect to the not-found page if the product does not exist
     if (!product) {
@@ -31,21 +51,44 @@ export default function Detail() {
     const average = reviewList.length === 0 ? 0 : total / reviewList.length
 
     // Submit a new review
-    function handleSubmit(e) {
-        e.preventDefault()
+    async function handleSubmit(e) {
+    e.preventDefault()
+    setError('')
 
-        if (rating === '' || comment.trim() === '') return
+    if (name.trim() === '') {
+    setError('Please enter your name.')
+    return
+    }
 
-        const newReview = {
-            id: Date.now(),
-            name: 'Guest',
+    if (rating === '') {
+        setError('Please select a rating.')
+        return
+    }
+
+    if (comment.trim() === '') {
+        setError('Please write your review.')
+        return
+    }
+
+    try {
+        setSubmitting(true)
+
+        const saved = await postReview({
+            productId: product.id,
+            name: name.trim(),
             rating: Number(rating),
-            comment: comment,
-        }
+            comment: comment.trim(),
+        })
 
-        setReviewList([...reviewList, newReview])
+        setReviewList([...reviewList, saved])
+        setName('')
         setRating('')
         setComment('')
+        } catch (err) {
+            setError(err.message)
+        } finally {
+            setSubmitting(false)
+        }
     }
 
     return (
