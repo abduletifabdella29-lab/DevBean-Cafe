@@ -175,6 +175,7 @@ export default function Detail() {
                 <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                     <input
                         type="text"
+                        value={name}
                         placeholder="Your name"
                         onChange={(e) => setName(e.target.value)}
                         required
