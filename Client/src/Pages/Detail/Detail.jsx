@@ -217,13 +217,13 @@ export default function Detail() {
             {/* ---------- Related products ---------- */}
             {related.length > 0 && (
                 <section className="mt-8">
-                    <h2 className="text-white text-[18px] font-['DM_Serif_Text'] mb-4">
+                    <h2 className="text-white text-[20px] font-['DM_Serif_Text'] mb-4">
                         Related Products
                     </h2>
 
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {related.map((p) => (
-                            <Link key={p.id} to={`/product/${p.id}`} className="flex flex-col">
+                            <div  className="flex flex-col">
                                 <div className="w-full h-32 bg-[#5a3a34] rounded overflow-hidden">
                                     <img
                                         src={p.image}
@@ -237,7 +237,11 @@ export default function Detail() {
                                 <p className="text-[#FFB74D] text-[12px] font-['Averia_Serif_Libre']">
                                     ₹ {p.price}
                                 </p>
-                            </Link>
+                                <Link keys={p.id} to={`/product/${p.id}`} 
+                                className="px-2 py-1 mt-2 bg-[#FFB74D] text-black text-center text-[16px] font-['DM_Serif_Text'] font-bold rounded cursor-pointer transition-all duration-300 hover:bg-[#ffa726]">
+                                View Product
+                                </Link>
+                            </div>
                         ))}
                     </div>
                 </section>
