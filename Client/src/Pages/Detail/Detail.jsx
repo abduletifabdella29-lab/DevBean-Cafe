@@ -36,6 +36,13 @@ export default function Detail() {
         }
     }, [id])
 
+    useEffect(() => {
+        window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+        })
+    }, [id])
+
     // Redirect to the not-found page if the product does not exist
     if (!product) {
         return <Navigate to="*" replace />
