@@ -15,6 +15,7 @@ export default function Detail() {
     const [comment, setComment] = useState('')
     const [error, setError] = useState('')
     const [submitting, setSubmitting] = useState(false)
+    const [success, setSuccess] = useState('')
 
     // Load the reviews of this product from the database
     useEffect(() => {
@@ -36,12 +37,24 @@ export default function Detail() {
         }
     }, [id])
 
+    // Scroll to the top whenever the product ID changes.
     useEffect(() => {
         window.scrollTo({
         top: 0,
         behavior: 'instant'
         })
     }, [id])
+
+    // successfull message timeout
+    useEffect(() => {
+        if (!success) return
+
+        const timer = setTimeout(() => {
+            setSuccess('')
+        }, 5000)
+
+        return () => clearTimeout(timer)
+    }, [success])
 
     // Redirect to the not-found page if the product does not exist
     if (!product) {
@@ -61,6 +74,7 @@ export default function Detail() {
     async function handleSubmit(e) {
     e.preventDefault()
     setError('')
+    setSuccess('')
 
     if (name.trim() === '') {
     setError('Please enter your name.')
@@ -91,6 +105,7 @@ export default function Detail() {
         setName('')
         setRating('')
         setComment('')
+        setSuccess('Review submitted successfully!')
         } catch (err) {
             setError(err.message)
         } finally {
@@ -211,6 +226,21 @@ export default function Detail() {
                         required
                         className="bg-[#2A2321] placeholder:text-[#D7C6B9] text-[#D7C6B9] text-[13px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none resize-none"
                     />
+                    {success && (
+                        <div className="flex items-start gap-3 mt-3 p-4 rounded-lg bg-green-950/20 border-l-4 border-green-500">
+                            <span className="text-green-400 text-xl">✓</span>
+
+                            <div>
+                                <p className="text-green-400 text-sm font-semibold">
+                                    {success}
+                                </p>
+
+                                <p className="text-[#D7C6B9] text-xs mt-1">
+                                    Thank you for sharing your feedback.
+                                </p>
+                            </div>
+                        </div>
+                    )}
 
                     <button
                         type="submit"
