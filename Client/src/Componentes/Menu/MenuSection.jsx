@@ -40,7 +40,7 @@ function MenuSection() {
             </div>
 
             <div className="text-center w-full pt-10 pb-6">
-                <button className="text-[#E3983E]  py-2.5 px-3 border-2 border-[#E3983E] rounded-full font-['Averia_Serif_Libre']  hover:bg-[#6F4E37] hover:text-white hover:border-[#6F4E37] transition-all duration-300 ease-in-out">
+                <button className="text-[#E3983E]  py-2.5 px-3 border-2 border-[#E3983E] rounded-full font-['Averia_Serif_Libre']  hover:bg-[#ffa726] hover:text-black hover:border-[#ffa726] transition-all duration-300 ease-in-out">
                     Full Menu
                 </button>
             </div>
