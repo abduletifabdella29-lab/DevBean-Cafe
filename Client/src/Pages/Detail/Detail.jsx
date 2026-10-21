@@ -194,6 +194,22 @@ export default function Detail() {
                     Write a Review
                 </h3>
 
+                {success && (
+                        <div className="flex items-start my-3 gap-3 mt-3 p-4 rounded-lg bg-green-950/20 border-l-4 border-green-500">
+                            <span className="text-green-400 text-xl">✓</span>
+
+                            <div>
+                                <p className="text-green-400 text-sm font-semibold">
+                                    {success}
+                                </p>
+
+                                <p className="text-[#D7C6B9] text-xs mt-1">
+                                    Thank you for sharing your feedback.
+                                </p>
+                            </div>
+                        </div>
+                    )}
+
                 <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                     <input
                         type="text"
@@ -226,21 +242,7 @@ export default function Detail() {
                         required
                         className="bg-[#2A2321] placeholder:text-[#D7C6B9] text-[#D7C6B9] text-[13px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none resize-none"
                     />
-                    {success && (
-                        <div className="flex items-start gap-3 mt-3 p-4 rounded-lg bg-green-950/20 border-l-4 border-green-500">
-                            <span className="text-green-400 text-xl">✓</span>
-
-                            <div>
-                                <p className="text-green-400 text-sm font-semibold">
-                                    {success}
-                                </p>
-
-                                <p className="text-[#D7C6B9] text-xs mt-1">
-                                    Thank you for sharing your feedback.
-                                </p>
-                            </div>
-                        </div>
-                    )}
+                    
 
                     <button
                         type="submit"
