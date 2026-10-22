@@ -31,6 +31,13 @@ export default function Shop() {
         loadReviews()
     },[])
 
+    function calculateAverageRating(reviewList){
+        const total = reviewList.reduce(
+            (sum, review) => sum + Number(review.rating),0)
+
+            return reviewList.length === 0 ? 0 : total / reviewList.length
+    }
+
     return (
         <main className="px-12 py-4">
             {/* ---------- Category pills ---------- */}
