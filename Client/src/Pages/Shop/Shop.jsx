@@ -81,6 +81,9 @@ export default function Shop() {
                             <h3 className="text-white text-[20px] font-['DM_Serif_Text'] font-bold mt-3">
                                 {p.name}
                             </h3>
+                            <p className="text-[#FFB74D] text-[14px] mt-4 ml-auto">
+                                ★ {calculateAverageRating(reviewsByProduct[p.id] || []).toFixed(1)}
+                            </p>
                         </div>
 
                         <p className="text-[#D7C6B9] text-xs font-['DM_Serif_Text'] mt-1">
