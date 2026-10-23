@@ -16,6 +16,7 @@ export default function Detail() {
     const [error, setError] = useState('')
     const [submitting, setSubmitting] = useState(false)
     const [success, setSuccess] = useState('')
+    const [showAllReviews, setShowAllReviews] = useState(false)
 
     // Load the reviews of this product from the database
     useEffect(() => {
@@ -171,7 +172,7 @@ export default function Detail() {
 
                 {/* review list */}
                 <div className="flex flex-col gap-3 mt-4">
-                    {reviewList.slice(0,5).map((r) => (
+                    {reviewList.slice(0, showAllReviews ? reviewList.length : 7).map((r) => (
                         <div key={r.id} className="border-b border-white pb-3">
                             <div className="flex items-center gap-3">
                                 <h3 className="text-white text-[20px] font-['DM_Serif_Text'] font-bold">
