@@ -190,6 +190,15 @@ export default function Detail() {
                     ))}
                 </div>
 
+                {reviewList.length > 7 && (
+                    <button
+                        onClick={() => setShowAllReviews(!showAllReviews)}
+                        className=" px-3 py-2 mt-3 bg-[#FFB74D] text-black text-[16px] font-['DM_Serif_Text'] font-bold rounded cursor-pointer transition-all duration-300 hover:bg-[#ffa726]"
+                    >
+                        {showAllReviews ? "Show Less Reviews" : "Show All Reviews"}
+                    </button>
+                )}
+
                 {/* write a review */}
                 <h3 className="text-white text-[21px] font-['DM_Serif_Text'] mt-6 mb-3">
                     Write a Review
