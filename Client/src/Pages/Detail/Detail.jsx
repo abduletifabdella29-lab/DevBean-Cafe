@@ -225,6 +225,7 @@ export default function Detail() {
                         type="text"
                         value={name}
                         placeholder="Your name"
+                        maxLength={100}
                         onChange={(e) => setName(e.target.value)}
                         required
                         className="bg-[#2A2321] placeholder:text-[#D7C6B9] text-[#D7C6B9] text-[16px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none"
@@ -248,6 +249,7 @@ export default function Detail() {
                         rows="3"
                         placeholder="Write your review"
                         value={comment}
+                        maxLength={1000}
                         onChange={(e) => setComment(e.target.value)}
                         required
                         className="bg-[#2A2321] placeholder:text-[#D7C6B9] text-[#D7C6B9] text-[13px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none resize-none"
