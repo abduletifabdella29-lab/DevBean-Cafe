@@ -8,8 +8,8 @@ const items = [
 ]
 
 export default function Cart() {
-        return (
-        <main className="px-6 sm:px-12 py-8">
+    return (
+        <main className="px-6 sm:px-12 py-8 mb-30">
             <h1 className="text-[#D7C6B9] text-[24px] font-['DM_Serif_Text'] mb-4">My Cart</h1>
 
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-6 items-start">
