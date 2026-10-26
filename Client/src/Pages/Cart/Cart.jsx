@@ -8,6 +8,15 @@ const items = [
 ]
 
 export default function Cart() {
+    // logic 1: total number of items (sum of all quantities)
+    const itemCount = 3
+
+    // logic 2: subtotal (sum of price x quantity of every item)
+    const subtotal = 480
+
+    const shipping = 0
+    const total = subtotal + shipping
+    
     return (
         <main className="px-6 sm:px-12 py-8 mb-30">
             <h1 className="text-[#D7C6B9] text-[24px] font-['DM_Serif_Text'] mb-4">My Cart</h1>
@@ -74,7 +83,35 @@ export default function Cart() {
                 </div>
 
                 {/* ---------- Order summary ---------- */}
-                
+                <aside className="bg-[#3B2420] rounded-md p-5">
+                    <h2 className="text-white text-[24px] font-['DM_Serif_Text'] pb-2 border-b border-[#D7C6B9]">
+                        Order Summary
+                    </h2>
+
+                    <div className="flex justify-between mt-3 text-[#D7C6B9] text-[16px] font-['DM_Serif_Text']">
+                        <span>
+                            Subtotal ({itemCount} {itemCount === 1 ? 'item' : 'items'})
+                        </span>
+                        <span>₹ {subtotal}</span>
+                    </div>
+
+                    <div className="flex justify-between mt-2 text-[#D7C6B9] text-[16px] font-['DM_Serif_Text']">
+                        <span>Shipping</span>
+                        <span className="text-[#00ED00] font-bold">FREE FOR NOW</span>
+                    </div>
+
+                    <div className="flex justify-between mt-3 pt-3 border-t border-[#D7C6B9] text-white text-[20px] font-['DM_Serif_Text'] font-bold">
+                        <span>Total</span>
+                        <span>₹ {total}</span>
+                    </div>
+
+                    <button
+                        type="button"
+                        className="w-full mt-4 py-2 bg-[#FFB74D] text-black text-[14px] font-['DM_Serif_Text'] font-bold rounded cursor-pointer transition-all duration-300 hover:bg-[#ffa726]"
+                    >
+                        Place Order
+                    </button>
+                </aside>
             </div>
         </main>
     )
