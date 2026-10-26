@@ -19,14 +19,19 @@ export default function Cart() {
     
     if (items.length === 0) {
         return (
-            <main className="px-6 sm:px-12 py-8">
-                <h1 className="text-[#E8DDD3] text-[24px] font-['DM_Serif_Text']">My Cart</h1>
-                <p className="text-[#D7C6B9] text-[16px] font-['DM_Serif_Text'] mt-6">
-                    Your cart is empty.
+            <main className="bg-[#121212] min-h-[85vh] flex flex-col items-center justify-center gap-5 px-6 text-center">
+                <p className="text-[#FFB74D] text-[100px] font-['DM_Serif_Text'] leading-none">
+                    🛒
+                </p>
+                <h1 className="text-white text-[30px] font-['DM_Serif_Text']">
+                    Your Cart Is Empty
+                </h1>
+                <p className="text-[#D7C6B9] text-base font-['DM_Serif_Text'] max-w-md">
+                    Looks like you haven't added anything to your cart yet. Explore our shop and find something delicious.
                 </p>
                 <Link
                     to="/Shop"
-                    className="inline-block mt-4 px-5 py-2 rounded bg-[#FFB74D] text-black text-[14px] font-['DM_Serif_Text'] font-bold transition-all duration-300 hover:bg-[#ffa726]"
+                    className="inline-block mt-2 px-6 py-3 rounded bg-[#FFB74D] text-black text-sm font-['DM_Serif_Text'] font-bold transition-all duration-300 hover:bg-[#ffa726]"
                 >
                     Go to Shop
                 </Link>
