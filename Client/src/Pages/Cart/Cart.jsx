@@ -17,6 +17,23 @@ export default function Cart() {
     const shipping = 0
     const total = subtotal + shipping
     
+    if (items.length === 0) {
+        return (
+            <main className="px-6 sm:px-12 py-8">
+                <h1 className="text-[#E8DDD3] text-[24px] font-['DM_Serif_Text']">My Cart</h1>
+                <p className="text-[#D7C6B9] text-[16px] font-['DM_Serif_Text'] mt-6">
+                    Your cart is empty.
+                </p>
+                <Link
+                    to="/Shop"
+                    className="inline-block mt-4 px-5 py-2 rounded bg-[#FFB74D] text-black text-[14px] font-['DM_Serif_Text'] font-bold transition-all duration-300 hover:bg-[#ffa726]"
+                >
+                    Go to Shop
+                </Link>
+            </main>
+        )
+    }
+
     return (
         <main className="px-6 sm:px-12 py-8 mb-30">
             <h1 className="text-[#D7C6B9] text-[24px] font-['DM_Serif_Text'] mb-4">My Cart</h1>
