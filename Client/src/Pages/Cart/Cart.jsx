@@ -27,7 +27,7 @@ export default function Cart() {
                     Your Cart Is Empty
                 </h1>
                 <p className="text-[#D7C6B9] text-base font-['DM_Serif_Text'] max-w-md">
-                    Looks like you haven't added anything to your cart yet. Explore our shop and find something delicious.
+                    Looks like you haven't added anything to your cart yet. <br /> Explore our shop and find something delicious.
                 </p>
                 <Link
                     to="/Shop"
@@ -40,7 +40,7 @@ export default function Cart() {
     }
 
     return (
-        <main className="px-6 sm:px-12 py-8 mb-30">
+        <main className="px-6 sm:px-12 py-8 min-h-[85vh]">
             <h1 className="text-[#D7C6B9] text-[24px] font-['DM_Serif_Text'] mb-4">My Cart</h1>
 
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-6 items-start">
