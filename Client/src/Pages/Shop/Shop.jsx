@@ -39,7 +39,7 @@ export default function Shop() {
     }
 
     return (
-        <main className="px-12 py-4">
+        <main className="px-12 py-4 min-h-[85vh]">
             {/* ---------- Category pills ---------- */}
             <div className="flex justify-center flex-wrap gap-3 mb-8">
                 {categories.map((cat) => (
