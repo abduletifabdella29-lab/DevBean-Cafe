@@ -7,6 +7,7 @@ import Menu from './Pages/Menu/Menu.jsx'
 import Detail from './Pages/Detail/Detail.jsx'
 import NotFound from './Pages/NotFound.jsx'
 import Cart from './Pages/Cart/Cart.jsx'
+import Login from './Pages/Login/Login.jsx'
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/Menu" element={<Menu />} />
                 <Route path="/product/:id" element={<Detail />} />
                 <Route path="/cart"  element={<Cart />} />
+                <Route path="/login" element={<Login />} />
             </Route>
 
             <Route path="*" element={<NotFound />} />
