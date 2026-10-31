@@ -20,7 +20,7 @@ export default function Register() {
                     className="w-14 h-14 mx-auto"
                 />
 
-                <form noValidate className="flex flex-col gap-4 mt-6">
+                <form className="flex flex-col gap-4 mt-6">
 
                     <div className="flex flex-col gap-1">
                         <label
@@ -32,6 +32,7 @@ export default function Register() {
                         <input
                             id="firstName"
                             type="text"
+                            required
                             autoComplete="given-name"
                             placeholder="Enter First Name"
                             className="w-full bg-[#1E1E1E] placeholder:text-[#8f8078] text-[#D7C6B9] text-[14px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none focus:ring-2 focus:ring-[#FFB74D]"
@@ -48,6 +49,7 @@ export default function Register() {
                         <input
                             id="lastName"
                             type="text"
+                            required
                             autoComplete="family-name"
                             placeholder="Enter Last Name"
                             className="w-full bg-[#1E1E1E] placeholder:text-[#8f8078] text-[#D7C6B9] text-[14px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none focus:ring-2 focus:ring-[#FFB74D]"
@@ -64,6 +66,7 @@ export default function Register() {
                         <input
                             id="email"
                             type="email"
+                            required
                             autoComplete="email"
                             placeholder="Enter Email"
                             className="w-full bg-[#1E1E1E] placeholder:text-[#8f8078] text-[#D7C6B9] text-[14px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none focus:ring-2 focus:ring-[#FFB74D]"
@@ -82,6 +85,7 @@ export default function Register() {
                             <input
                                 id="password"
                                 type={showPassword ? "text" : "password"}
+                                required
                                 autoComplete="new-password"
                                 placeholder="Enter Password"
                                 className="w-full bg-[#1E1E1E] placeholder:text-[#8f8078] text-[#D7C6B9] text-[14px] font-['DM_Serif_Text'] rounded pl-3 pr-16 py-2 outline-none focus:ring-2 focus:ring-[#FFB74D]"
