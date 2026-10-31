@@ -14,7 +14,7 @@ export default function Login() {
             <div className="w-full max-w-150 bg-[#3B2420] rounded-md mb-7 p-8 mt-10">
                 <img src={logo} alt="DevBean logo" className="w-14 h-14 mx-auto" />
 
-                <form noValidate className="flex flex-col gap-4 mt-6">
+                <form className="flex flex-col gap-4 mt-6">
                     {/* ---------- Email ---------- */}
                     <div className="flex flex-col gap-1">
                         <label
@@ -26,6 +26,7 @@ export default function Login() {
                         <input
                             id="email"
                             type="email"
+                            required
                             autoComplete="email"
                             placeholder="Enter Email"
                             className="w-full bg-[#1E1E1E] placeholder:text-[#8f8078] text-[#D7C6B9] text-[14px] font-['DM_Serif_Text'] rounded px-3 py-2 outline-none focus:ring-2 focus:ring-[#FFB74D]"
@@ -46,6 +47,7 @@ export default function Login() {
                                 id="password"
                                 type={showPassword ? "text" : "password"}
                                 autoComplete="current-password"
+                                required
                                 placeholder="Enter Password"
                                 className="w-full bg-[#1E1E1E] placeholder:text-[#8f8078] text-[#D7C6B9] text-[14px] font-['DM_Serif_Text'] rounded pl-3 pr-16 py-2 outline-none focus:ring-2 focus:ring-[#FFB74D]"
                             />
