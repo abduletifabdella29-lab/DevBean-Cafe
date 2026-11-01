@@ -5,3 +5,9 @@ const SALT_ROUNDS = 10
 
 // Used to keep the login time the same when the email does not exist
 const DUMMY_HUSH = bcrypt.hashSync('dummy-password',SALT_ROUNDS)
+
+function httpError (status, message){
+    const err = new Error(message)
+    err.status = status
+    return err
+}
