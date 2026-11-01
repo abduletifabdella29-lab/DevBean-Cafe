@@ -11,3 +11,14 @@ function httpError (status, message){
     err.status = status
     return err
 }
+
+// Never send password_hash out of the server
+function toPublicUser(row) {
+    return {
+        id: row.id,
+        firstName: row.first_name,
+        lastName: row.last_name,
+        email: row.email,
+        role: row.role,
+    }
+}
