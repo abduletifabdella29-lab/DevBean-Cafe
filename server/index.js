@@ -2,13 +2,24 @@ import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
 import pool from './db/db.config.js'
+import cookieParser from 'cookie-parser'
 import reviewRoutes from './src/api/review/review.routes.js'
 
 const app = express()
 
-app.use(cors())
-app.use(express.json())
+if (!process.env.JWT_SECRET) {
+    console.error ('JWT_SECRET is missing in .env')
+    process.exit(1)
+}
 
+app.use
+    (cors({
+        origin: process.env.CLIENT_URL,
+        credentials: true,
+    }))
+
+app.use(express.json())
+app.use(cookieParser())
 app.use('/api/reviews', reviewRoutes)
 
 const PORT = process.env.PORT || 3001
