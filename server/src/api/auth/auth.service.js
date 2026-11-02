@@ -22,3 +22,12 @@ function toPublicUser(row) {
         role: row.role,
     }
 }
+
+export async function getUserById(id) {
+    const [rows] = await pool.query(
+        'SELECT id, first_name, last_name, email, role FROM users WHERE id = ?',
+        [id]
+    )
+
+    return rows[0] ? toPublicUser(rows[0]) : null
+}
