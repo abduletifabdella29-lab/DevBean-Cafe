@@ -53,6 +53,7 @@ export async function registerUser({firstName, lastName, email, password}) {
         return getUserById(result.insertId)
 
     } catch (err) {
+         // Two people registering with the same email at the same moment
         if (err.code === 'ER_DUP_ENTRY') {
             throw httpError (409, 'An account with this email already exists')
         }
