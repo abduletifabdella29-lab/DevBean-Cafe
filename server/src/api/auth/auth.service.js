@@ -60,3 +60,11 @@ export async function registerUser({firstName, lastName, email, password}) {
         throw err
     }
 }
+
+export async function loginUser({email, password}) {
+    const [rows] = await pool.query (
+        'SELECT * FROM users WHERE email = ?',
+        [email]
+    )
+    const user = rows[0]
+}
