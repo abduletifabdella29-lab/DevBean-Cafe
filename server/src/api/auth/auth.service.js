@@ -31,3 +31,17 @@ export async function getUserById(id) {
 
     return rows[0] ? toPublicUser(rows[0]) : null
 }
+
+export async function registerUser({firstName, lastName, email, password}) {
+    const [existing] = await pool.query (
+        'SELECT id from users WHERE email = ?',
+        [email]
+    )
+
+    if (existing.length > 0) {
+        throw httpError (409, "An account with this email already exists")
+    }
+
+    const passwordHash = await bcrypt.hash(password, SALT_ROUNDS)
+
+}
