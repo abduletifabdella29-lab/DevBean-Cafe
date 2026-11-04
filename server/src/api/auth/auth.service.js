@@ -78,4 +78,6 @@ export async function loginUser({email, password}) {
     if (!user || !passwordMatches) {
         throw httpError (401, 'Invalid email or password')
     }
+
+    return toPublicUser(user)
 }
