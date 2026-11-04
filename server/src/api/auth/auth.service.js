@@ -67,4 +67,10 @@ export async function loginUser({email, password}) {
         [email]
     )
     const user = rows[0]
+
+     // Always run bcrypt.compare, even when the user does not exist
+    const passwordMatches = await bcrypt.compare(
+    password,
+    user ? user.password_hash : DUMMY_HASH
+    )
 }
