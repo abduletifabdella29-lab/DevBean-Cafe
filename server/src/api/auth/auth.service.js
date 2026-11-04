@@ -73,4 +73,9 @@ export async function loginUser({email, password}) {
     password,
     user ? user.password_hash : DUMMY_HASH
     )
+
+    // One message for both cases, so nobody can find out which emails are registered
+    if (!user || !passwordMatches) {
+        throw httpError (401, 'Invalid email or password')
+    }
 }
