@@ -24,3 +24,12 @@ function badRequest (message) {
 function cleanText (value) {
     return typeof value === 'string' ? value.trim('') : ''
 }
+
+function setAuthCookie (res, user) {
+    const token = jwt.sign(
+        {id: user.id},
+        process.env.JWT_SECRET,
+        { expiresIn: '7d' }
+    )
+    res.cookie(COOKIE_NAME, token, cookieOptions)
+}
