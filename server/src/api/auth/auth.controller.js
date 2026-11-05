@@ -14,3 +14,9 @@ const cookieOptions = {
 
 // clearCookie needs the same options, without maxAge
 const { maxAge, ...clearOptions } = cookieOptions
+
+function badRequest (message) {
+    const err = new Error (message)
+    err.status = 400
+    return err
+}
