@@ -20,3 +20,7 @@ function badRequest (message) {
     err.status = 400
     return err
 }
+
+function cleanText (value) {
+    return typeof value === 'string' ? value.trim('') : ''
+}
