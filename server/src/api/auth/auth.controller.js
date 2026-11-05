@@ -11,3 +11,6 @@ const cookieOptions = {
     secure: process.env.NODE_ENV === 'production',
     maxAge: SEVEN_DAYS, 
 }
+
+// clearCookie needs the same options, without maxAge
+const { maxAge, ...clearOptions } = cookieOptions
