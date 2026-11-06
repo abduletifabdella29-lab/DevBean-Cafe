@@ -41,4 +41,18 @@ export async function register(req, res) {
     const lastName = cleanText(body.lastName)
     const email = cleanText(body.email).toLowerCase()
     const password = typeof body.password === 'string' ? body.password : ''
+
+    if (firstName === '' || firstName.length > 50) {
+        throw badRequest('first name is required (max 50 characters)')
+    }
+    if (lastName === '' || lastName.length > 50) {
+        throw badRequest('last name is required (max 50 characters)')
+    }
+    if (!EMAIL_REGEX.test(email) || email.length > 150) {
+        throw badRequest('a valid email is required')
+    }
+    // bcrypt only uses the first 72 bytes of a password
+    if (password.length < 8 || Buffer.byteLength(password) > 72) {
+        throw badRequest('password must be at least 8 characters (max 72 bytes)')
+    }
 }
