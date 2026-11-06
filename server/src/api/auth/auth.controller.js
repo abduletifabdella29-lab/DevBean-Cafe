@@ -55,4 +55,14 @@ export async function register(req, res) {
     if (password.length < 8 || Buffer.byteLength(password) > 72) {
         throw badRequest('password must be at least 8 characters (max 72 bytes)')
     }
+
+    const user = await registerUser({ 
+        firstName, 
+        lastName, 
+        email, 
+        password
+    })
+
+    setAuthCookie(res, user)
+    res.status(201).json(user)
 }
