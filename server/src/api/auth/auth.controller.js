@@ -33,3 +33,12 @@ function setAuthCookie (res, user) {
     )
     res.cookie(COOKIE_NAME, token, cookieOptions)
 }
+
+export async function register(req, res) {
+    const body = req.body ?? {}
+
+    const firstName = cleanText(body.firstName)
+    const lastName = cleanText(body.lastName)
+    const email = cleanText(body.email).toLowerCase()
+    const password = typeof body.password === 'string' ? body.password : ''
+}
