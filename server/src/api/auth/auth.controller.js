@@ -82,3 +82,8 @@ export async function login(req, res) {
     setAuthCookie(res, user)
     res.json(user)
 }
+
+export function logout(req, res) {
+    res.clearCookie(COOKIE_NAME, clearOptions)
+    res.json({message: 'Logged out'})
+}
