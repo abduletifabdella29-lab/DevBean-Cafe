@@ -66,3 +66,14 @@ export async function register(req, res) {
     setAuthCookie(res, user)
     res.status(201).json(user)
 }
+
+export async function login(req, res) {
+    const body = req.body ?? {}
+
+    const email = cleanText(body.email).toLowerCase()
+    const password = typeof body.password === 'string' ? body.password : ''
+    
+    if (email === '' || password === '') {
+        throw badRequest('email and password are required')
+    }
+}
