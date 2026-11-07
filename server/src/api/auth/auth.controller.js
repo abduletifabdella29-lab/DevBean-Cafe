@@ -76,4 +76,9 @@ export async function login(req, res) {
     if (email === '' || password === '') {
         throw badRequest('email and password are required')
     }
+
+    const user = await loginUser({email, password})
+    
+    setAuthCookie(res, user)
+    res.json(user)
 }
