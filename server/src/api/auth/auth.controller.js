@@ -87,3 +87,8 @@ export function logout(req, res) {
     res.clearCookie(COOKIE_NAME, clearOptions)
     res.json({message: 'Logged out'})
 }
+
+// requireAuth has already put the logged-in user in req.user
+export function me(req, res) {
+    req.json(req.user)
+}
