@@ -6,3 +6,7 @@ function unauthorized() {
     err.status = 401
     return err
 }
+
+export async function requireAuth(req, res, next) {
+    
+}
