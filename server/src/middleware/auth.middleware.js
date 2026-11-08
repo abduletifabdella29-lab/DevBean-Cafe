@@ -9,4 +9,8 @@ function unauthorized() {
 
 export async function requireAuth(req, res, next) {
     const token = req.cookies?.token
+
+    if (!token) {
+        next(unauthorized())
+    }
 }
