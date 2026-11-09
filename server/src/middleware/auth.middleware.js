@@ -13,4 +13,13 @@ export async function requireAuth(req, res, next) {
     if (!token) {
         return next(unauthorized())
     }
+
+    let payload
+
+    try {
+        payload = jwt.verify(token, process.env.JWT.SECRET)
+    } catch {
+        // wrong signatur or expired token
+        return next(unauthorized())
+    }  
 }
