@@ -21,5 +21,11 @@ export async function requireAuth(req, res, next) {
     } catch {
         // wrong signatur or expired token
         return next(unauthorized())
+    }
+
+    const user = await getUserById(payload.id)
+
+    if (!user) {
+        return next(unauthorized())
     }  
 }
