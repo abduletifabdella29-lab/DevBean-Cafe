@@ -22,10 +22,13 @@ export async function requireAuth(req, res, next) {
         // wrong signatur or expired token
         return next(unauthorized())
     }
-
+    
     const user = await getUserById(payload.id)
 
     if (!user) {
         return next(unauthorized())
-    }  
+    }
+
+    req.user = user
+    next()    
 }
