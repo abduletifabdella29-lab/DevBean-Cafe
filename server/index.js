@@ -3,12 +3,12 @@ import express from 'express'
 import cors from 'cors'
 import pool from './db/db.config.js'
 import cookieParser from 'cookie-parser'
-import reviewRoutes from './src/api/review/review.routes.js'
+import mainRoutes from './src/main.routes.js'
 
 const app = express()
 
 if (!process.env.JWT_SECRET) {
-    console.error ('JWT_SECRET is missing in .env')
+    console.error('JWT_SECRET is missing in .env')
     process.exit(1)
 }
 
@@ -20,7 +20,8 @@ app.use
 
 app.use(express.json())
 app.use(cookieParser())
-app.use('/api/reviews', reviewRoutes)
+
+app.use('/api', mainRoutes)
 
 const PORT = process.env.PORT || 3001
 
