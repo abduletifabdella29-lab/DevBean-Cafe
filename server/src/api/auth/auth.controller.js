@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-import { registerUser, loginUser } from './auth.service'
+import { registerUser, loginUser } from './auth.service.js'
 
 const COOKIE_NAME = 'token'
 const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000
