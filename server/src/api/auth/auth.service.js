@@ -45,7 +45,7 @@ export async function registerUser({firstName, lastName, email, password}) {
     const passwordHash = await bcrypt.hash(password, SALT_ROUNDS)
 
     try {
-        const [result] = pool.query(
+        const [result] = await pool.query(
             'INSERT INTO users (first_name, last_name, email, password_hash) VALUES (?, ?, ?, ?)',
             [firstName, lastName, email, passwordHash]
         )
