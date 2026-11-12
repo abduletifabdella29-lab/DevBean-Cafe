@@ -4,6 +4,7 @@ import cors from 'cors'
 import pool from './db/db.config.js'
 import cookieParser from 'cookie-parser'
 import mainRoutes from './src/main.routes.js'
+import { notFound, errorHandler } from './src/middleware/error-handler.js'
 
 const app = express()
 
@@ -21,7 +22,15 @@ app.use
 app.use(express.json())
 app.use(cookieParser())
 
+app.get('/api/health', async (req, res) => {
+    const [rows] = await pool.query('SELECT 1 + 1 AS result')
+    res.json({ ok: true, result: rows[0].result })
+})
+
 app.use('/api', mainRoutes)
+
+app.use(notFound)
+app.use(errorHandler)
 
 const PORT = process.env.PORT || 3001
 
