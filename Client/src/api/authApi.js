@@ -6,4 +6,6 @@ async function request(path, options = {}) {
         headers: {'Content-Type' : 'application/json'},
         ...options,
     })
+
+    const data = await res.json().catch(() => ({}))
 }
