@@ -17,3 +17,10 @@ async function request(path, options = {}) {
 
     return data
 }
+
+export function registerRequest(body) {
+    return request('/auth/register', {
+        method: 'POST',
+        body: JSON.stringify(body)
+    })
+}
