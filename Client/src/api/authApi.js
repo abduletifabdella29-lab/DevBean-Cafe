@@ -31,3 +31,8 @@ export function loginRequest (body) {
         body: JSON.stringify(body)
     })
 }
+
+export function logoutRequest() {
+    return request('/auth/logout' ,
+        {method: 'POST'})
+}
