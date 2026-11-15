@@ -24,3 +24,10 @@ export function registerRequest(body) {
         body: JSON.stringify(body)
     })
 }
+
+export function loginRequest (body) {
+    return request('/auth/login', {
+        method: 'POST',
+        body: JSON.stringify(body)
+    })
+}
