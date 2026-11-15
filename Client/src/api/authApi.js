@@ -36,3 +36,7 @@ export function logoutRequest() {
     return request('/auth/logout' ,
         {method: 'POST'})
 }
+
+export function fetchMe() {
+    return request('/auth/me')
+}
