@@ -10,10 +10,16 @@ export function AuthProvider({ children }) {
 }
 
 useEffect(() => {
-  let ignore = false
+    let ignore = false
 
-  async function loadUser() {
-    
-  }
-}
+    async function loadUser() {
+        try {
+            const me = await fetchMe()
+            if (!ignore) setUser(me)
+        } catch {
+            if (!ignore) setUser(null)
+        } finally {
+            if (!ignore) setLoading(false)
+        }
+    }
 }, [])
