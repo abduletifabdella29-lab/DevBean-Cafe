@@ -10,6 +10,10 @@ export function AuthProvider({ children }) {
 }
 
 useEffect(() => {
-  let ignore = false 
+  let ignore = false
+
+  async function loadUser() {
+    
+  }
 }
 }, [])
