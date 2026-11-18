@@ -8,3 +8,8 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true)
   
 }
+
+useEffect(() => {
+  let ignore = false 
+}
+}, [])
