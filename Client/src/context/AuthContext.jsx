@@ -35,3 +35,7 @@ async function login(credentials) {
   setUser(loggedIn)
   return loggedIn 
 }
+
+async function register(data) {
+  
+}
