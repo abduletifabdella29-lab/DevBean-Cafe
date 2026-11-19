@@ -22,4 +22,6 @@ useEffect(() => {
             if (!ignore) setLoading(false)
         }
     }
+
+  loadUser()
 }, [])
