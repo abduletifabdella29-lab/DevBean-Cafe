@@ -24,4 +24,8 @@ useEffect(() => {
     }
 
   loadUser()
+
+  return () => {
+      ignore = true
+  }
 }, [])
