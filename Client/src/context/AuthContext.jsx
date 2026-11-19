@@ -31,5 +31,7 @@ useEffect(() => {
 }, [])
 
 async function login(credentials) {
-  
+  const loggedIn = await loginRequest(credentials)
+  setUser(loggedIn)
+  return loggedIn 
 }
