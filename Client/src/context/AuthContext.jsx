@@ -4,9 +4,9 @@ import { fetchMe, loginRequest, logoutRequest, registerRequest } from '../api/au
 const AuthContext = createContext(null)
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null)
-  const [loading, setLoading] = useState(true)
-  
+    const [user, setUser] = useState(null)
+    const [loading, setLoading] = useState(true)
+
 }
 
 useEffect(() => {
@@ -23,19 +23,21 @@ useEffect(() => {
         }
     }
 
-  loadUser()
+    loadUser()
 
-  return () => {
-      ignore = true
-  }
+    return () => {
+        ignore = true
+    }
 }, [])
 
 async function login(credentials) {
-  const loggedIn = await loginRequest(credentials)
-  setUser(loggedIn)
-  return loggedIn 
+    const loggedIn = await loginRequest(credentials)
+    setUser(loggedIn)
+    return loggedIn
 }
 
 async function register(data) {
-  
+    const created = await registerRequest(data)
+    setUser(created)
+    return created
 }
