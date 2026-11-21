@@ -7,38 +7,50 @@ export function AuthProvider({ children }) {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
 
-useEffect(() => {
-    let ignore = false
+    useEffect(() => {
+        let ignore = false
 
-    etb
-    async function loadUser() {
+        async function loadUser() {
+            try {
+                const me = await fetchMe()
+                if (!ignore) setUser(me)
+            } catch {
+                if (!ignore) setUser(null)
+            } finally {
+                if (!ignore) setLoading(false)
+            }
+        }
+
+        loadUser()
+
+        return () => {
+            ignore = true
+        }
+    }, [])
+
+    async function login(credentials) {
+        const loggedIn = await loginRequest(credentials)
+        setUser(loggedIn)
+        return loggedIn
+    }
+
+    async function register(data) {
+        const created = await registerRequest(data)
+        setUser(created)
+        return created
+    }
+
+    async function logout() {
         try {
-            const me = await fetchMe()
-            if (!ignore) setUser(me)
-        } catch {
-            if (!ignore) setUser(null)
+            await logoutRequest()
         } finally {
-            if (!ignore) setLoading(false)
+            setUser(null)
         }
     }
 
-    loadUser()
-
-    return () => {
-        ignore = true
-    }
-}, [])
-
-async function login(credentials) {
-    const loggedIn = await loginRequest(credentials)
-    setUser(loggedIn)
-    return loggedIn
-}
-
-async function register(data) {
-    const created = await registerRequest(data)
-    setUser(created)
-    return created
-}
-
+    return (
+        <AuthContext.Provider value={{ user, loading, login, register, logout }}>
+            {children}
+        </AuthContext.Provider>
+    )
 }
