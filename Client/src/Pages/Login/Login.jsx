@@ -15,6 +15,9 @@ export default function Login() {
     const { login } = useAuth()
     const navigate = useNavigate()
     const location = useLocation()
+
+    // If a protected page sent the user here, go back to it after login
+    const redirectTo = location.state?.from || '/Shop'
     
     return (
         <main className="min-h-[85vh] px-6 py-5 flex flex-col items-center">
