@@ -11,6 +11,8 @@ export default function Login() {
     const [showPassword, setShowPassword] = useState(false)
     const [error, setError] = useState('')
     const [submitting, setSubmitting] = useState(false)
+
+    const { login } = useAuth()
     
     return (
         <main className="min-h-[85vh] px-6 py-5 flex flex-col items-center">
