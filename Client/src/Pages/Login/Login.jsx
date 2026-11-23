@@ -6,8 +6,10 @@ import { useAuth } from '../../context/AuthContext.jsx'
 import logo from '../../assets/Icons/logo 1.png'
 
 export default function Login() {
-
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     const [showPassword, setShowPassword] = useState(false)
+    const [error, setError] = useState('')
     
     return (
         <main className="min-h-[85vh] px-6 py-5 flex flex-col items-center">
