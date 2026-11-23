@@ -13,6 +13,8 @@ export default function Login() {
     const [submitting, setSubmitting] = useState(false)
 
     const { login } = useAuth()
+    const navigate = useNavigate()
+    const location = useLocation()
     
     return (
         <main className="min-h-[85vh] px-6 py-5 flex flex-col items-center">
