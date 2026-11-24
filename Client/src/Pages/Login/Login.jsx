@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { HiEye, HiEyeOff } from 'react-icons/hi'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { HiEye, HiEyeOff } from 'react-icons/hi'
 import { useAuth } from '../../context/AuthContext.jsx'
 import logo from '../../assets/Icons/logo 1.png'
 
