@@ -28,6 +28,11 @@ export default function Login() {
             return
         }
 
+        try {
+            setSubmitting(true)
+            await login({ email: email.trim(), password })
+            navigate(redirectTo, { replace: true })
+        }
     }
 
     return (
