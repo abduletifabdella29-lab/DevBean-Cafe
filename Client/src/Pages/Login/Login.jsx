@@ -34,6 +34,8 @@ export default function Login() {
             navigate(redirectTo, { replace: true })
         } catch (err) {
             setError(err.message)
+        } finally {
+            setSubmitting(false)
         }
     }
 
