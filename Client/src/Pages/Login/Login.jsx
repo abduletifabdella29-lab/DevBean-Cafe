@@ -19,6 +19,10 @@ export default function Login() {
     // If a protected page sent the user here, go back to it after login
     const redirectTo = location.state?.from || '/Shop'
     
+    async function handleSubmit(e) {
+        
+    }
+
     return (
         <main className="min-h-[85vh] px-6 py-5 flex flex-col items-center">
             <h1 className="text-[#D7C6B9] text-[32px] font-['DM_Serif_Text']">Login</h1>
