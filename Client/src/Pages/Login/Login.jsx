@@ -20,7 +20,7 @@ export default function Login() {
     const redirectTo = location.state?.from || '/Shop'
     
     async function handleSubmit(e) {
-        
+        e.preventDefault()
     }
 
     return (
