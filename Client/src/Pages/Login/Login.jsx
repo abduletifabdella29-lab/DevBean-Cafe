@@ -32,6 +32,8 @@ export default function Login() {
             setSubmitting(true)
             await login({ email: email.trim(), password })
             navigate(redirectTo, { replace: true })
+        } catch (err) {
+            setError(err.message)
         }
     }
 
