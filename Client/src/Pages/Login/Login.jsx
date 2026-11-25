@@ -105,9 +105,10 @@ export default function Login() {
 
                     <button
                         type="submit"
+                        disabled={submitting}
                         className="w-full py-2 bg-[#FFB74D] text-black text-[14px] font-['DM_Serif_Text'] font-bold rounded cursor-pointer transition-all duration-300 hover:bg-[#ffa726] disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                        LOGIN
+                        {submitting ? 'Logging in...' : 'LOGIN'}
                     </button>
                 </form>
 
