@@ -96,6 +96,13 @@ export default function Login() {
                         </div>
                     </div>
 
+                     {/* ---------- Error ---------- */}
+                     {error && (
+                        <p role="alert" className="text-red-400 text-[13px] font-['DM_Serif_Text']">
+                            {error}
+                        </p>
+                     )}
+
                     <button
                         type="submit"
                         className="w-full py-2 bg-[#FFB74D] text-black text-[14px] font-['DM_Serif_Text'] font-bold rounded cursor-pointer transition-all duration-300 hover:bg-[#ffa726] disabled:opacity-60 disabled:cursor-not-allowed"
