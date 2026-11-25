@@ -45,7 +45,7 @@ export default function Login() {
             <div className="w-full max-w-150 bg-[#3B2420] rounded-md mb-7 p-8 mt-10">
                 <img src={logo} alt="DevBean logo" className="w-14 h-14 mx-auto" />
 
-                <form className="flex flex-col gap-4 mt-6">
+                <form noValidate onSubmit={handleSubmit} className="flex flex-col gap-4 mt-6">
                     {/* ---------- Email ---------- */}
                     <div className="flex flex-col gap-1">
                         <label
