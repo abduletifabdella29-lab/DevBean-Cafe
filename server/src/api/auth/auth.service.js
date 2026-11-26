@@ -81,3 +81,7 @@ export async function loginUser({email, password}) {
 
     return toPublicUser(user)
 }
+
+// const newHash = await bcrypt.hash('', 10)
+
+// console.log(newHash)
