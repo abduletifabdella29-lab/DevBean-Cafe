@@ -16,7 +16,7 @@ export default function Login() {
     const location = useLocation()
 
     // If a protected page sent the user here, go back to it after login
-    const redirectTo = location.state?.from || '/Shop'
+    const redirectTo = location.state?.from || '/'
     
     async function handleSubmit(e) {
         e.preventDefault()
