@@ -90,5 +90,5 @@ export function logout(req, res) {
 
 // requireAuth has already put the logged-in user in req.user
 export function me(req, res) {
-    req.json(req.user)
+    res.json(req.user)
 }
