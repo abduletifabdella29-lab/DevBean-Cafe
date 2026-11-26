@@ -4,8 +4,11 @@ import { HiEye, HiEyeOff } from 'react-icons/hi'
 import logo from '../../assets/Icons/logo 1.png'
 
 export default function Register() {
-
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     const [showPassword, setShowPassword] = useState(false)
+    const [error, setError] = useState('')
+    const [submitting, setSubmitting] = useState(false)
 
     return (
         <main className="min-h-[85vh] px-6 py-5 flex flex-col items-center">
