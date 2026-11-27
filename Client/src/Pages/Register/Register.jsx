@@ -17,6 +17,7 @@ export default function Register() {
 
     const { register } = useAuth()
     const navigate = useNavigate()
+    const location = useLocation()
 
     const redirectTo = location.state?.from || '/'
 
