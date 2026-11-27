@@ -148,6 +148,13 @@ export default function Register() {
                         </div>
                     </div>
 
+                    {/* ---------- Error ---------- */}
+                     {error && (
+                        <p role="alert" className="text-red-400 text-[13px] font-['DM_Serif_Text']">
+                            {error}
+                        </p>
+                     )}
+                     
                     <button
                         type="submit"
                         disabled={submitting}
