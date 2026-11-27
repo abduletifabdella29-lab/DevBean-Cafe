@@ -8,6 +8,7 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export default function Register() {
     const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [showPassword, setShowPassword] = useState(false)
@@ -88,6 +89,8 @@ export default function Register() {
                         <input
                             id="lastName"
                             type="text"
+                            value={lastName}
+                            onChange={(e) => setLastName(e.target.value)}
                             required
                             autoComplete="family-name"
                             placeholder="Enter Last Name"
