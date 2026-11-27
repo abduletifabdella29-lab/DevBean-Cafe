@@ -36,8 +36,8 @@ export default function Register() {
                 password
             })
             navigate(redirectTo, { replace: true })
-        } catch {
-
+        } catch (err){
+            setError(err.message)
         }
     }
 
