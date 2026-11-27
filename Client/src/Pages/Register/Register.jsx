@@ -38,6 +38,8 @@ export default function Register() {
             navigate(redirectTo, { replace: true })
         } catch (err){
             setError(err.message)
+        } finally {
+            setSubmitting(false)
         }
     }
 
