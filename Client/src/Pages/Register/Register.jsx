@@ -7,6 +7,7 @@ import logo from '../../assets/Icons/logo 1.png'
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export default function Register() {
+    const [firstName, setFirstName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [showPassword, setShowPassword] = useState(false)
