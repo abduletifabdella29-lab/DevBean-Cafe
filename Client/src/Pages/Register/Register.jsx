@@ -4,6 +4,8 @@ import { HiEye, HiEyeOff } from 'react-icons/hi'
 import { useAuth } from '../../context/AuthContext.jsx'
 import logo from '../../assets/Icons/logo 1.png'
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
 export default function Register() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
