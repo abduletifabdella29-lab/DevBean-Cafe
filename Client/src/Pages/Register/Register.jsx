@@ -68,6 +68,8 @@ export default function Register() {
                         <input
                             id="firstName"
                             type="text"
+                            value={firstName}
+                            onChange={(e) => setEmail(e.target.value)}
                             required
                             autoComplete="given-name"
                             placeholder="Enter First Name"
