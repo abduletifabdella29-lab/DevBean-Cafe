@@ -24,6 +24,18 @@ export default function Register() {
             setError('All fields are required!')
             return
         }
+
+        try {
+            setSubmitting(true)
+            await register({
+                firstName: firstName.trim(),
+                lastName: lastName.trim(),
+                email: email.trim(),
+                password
+            })
+        } catch {
+
+        }
     }
 
     return (
