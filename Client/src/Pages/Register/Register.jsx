@@ -152,7 +152,7 @@ export default function Register() {
                                 type="button"
                                 aria-label={showPassword ? "Hide password" : "Show password"}
                                 onClick={() => setShowPassword(!showPassword)}
-                                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FFB74D] text-[13px] font-['DM_Serif_Text'] cursor-pointer hover:underline"
+                                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FFB74D] text-[13px] font-['DM_Serif_Text'] cursor-pointer hover:text-[#ffa726]"
                             >
                                 {showPassword ? <HiEyeOff size={18} /> : <HiEye size={18} />}
                             </button>
