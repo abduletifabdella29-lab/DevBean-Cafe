@@ -56,7 +56,7 @@ export default function Register() {
                     className="w-14 h-14 mx-auto"
                 />
 
-                <form className="flex flex-col gap-4 mt-6">
+                <form noValidate onSubmit={handleSubmit} className="flex flex-col gap-4 mt-6">
 
                     <div className="flex flex-col gap-1">
                         <label
