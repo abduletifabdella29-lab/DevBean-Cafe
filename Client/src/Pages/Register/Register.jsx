@@ -26,7 +26,12 @@ export default function Register() {
         setError('')
 
         if (!firstName || !lastName || !email || !password) {
-            setError('All fields are required!')
+            setError('All fields are required')
+            return
+        }
+
+        if (!EMAIL_REGEX.test(email.trim())) {
+            setError('Please enter a valid email address')
             return
         }
 
