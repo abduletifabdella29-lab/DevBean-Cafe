@@ -16,6 +16,8 @@ export default function Register() {
     const { register } = useAuth()
     const navigate = useNavigate()
 
+    const redirectTo = location.state?.from || '/'
+
     async function handleSubmit(e) {
         e.preventDefault()   
         setError('')
