@@ -16,6 +16,11 @@ export default function Register() {
     const { register } = useAuth()
     const navigate = useNavigate()
 
+    async function handleSubmit(e) {
+        e.preventDefault()   
+        
+    }
+
     return (
         <main className="min-h-[85vh] px-6 py-5 flex flex-col items-center">
             <h1 className="text-[#D7C6B9] text-[32px] font-['DM_Serif_Text']">
