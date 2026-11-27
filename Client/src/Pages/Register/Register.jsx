@@ -19,6 +19,11 @@ export default function Register() {
     async function handleSubmit(e) {
         e.preventDefault()   
         setError('')
+
+        if (!firstName || !lastName || !email || !password) {
+            setError('All fields are required!')
+            return
+        }
     }
 
     return (
