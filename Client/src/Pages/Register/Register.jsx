@@ -35,6 +35,7 @@ export default function Register() {
                 email: email.trim(),
                 password
             })
+            navigate(redirectTo, { replace: true })
         } catch {
 
         }
