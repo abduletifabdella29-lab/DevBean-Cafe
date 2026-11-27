@@ -108,6 +108,8 @@ export default function Register() {
                         <input
                             id="email"
                             type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             required
                             autoComplete="email"
                             placeholder="Enter Email"
@@ -127,6 +129,8 @@ export default function Register() {
                             <input
                                 id="password"
                                 type={showPassword ? "text" : "password"}
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                                 required
                                 autoComplete="new-password"
                                 placeholder="Enter Password"
