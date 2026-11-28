@@ -22,38 +22,42 @@ export default function Register() {
     const redirectTo = location.state?.from || '/'
 
     async function handleSubmit(e) {
-        e.preventDefault()   
-        setError('')
+    e.preventDefault()
+    setError('')
 
-        if (!firstName || !lastName || !email || !password) {
-            setError('All fields are required')
-            return
-        }
+    const first = firstName.trim()
+    const last = lastName.trim()
+    const mail = email.trim()
 
-        if (!EMAIL_REGEX.test(email.trim())) {
-            setError('Please enter a valid email address')
-            return
-        }
+    if (!first || !last || !mail || !password) {
+        setError('All fields are required')
+        return
+    }
 
-        if (password.length < 8) {
-            setError('Password must be at least 8 characters')
-            return
-        }
+    if (!EMAIL_REGEX.test(mail)) {
+        setError('Please enter a valid email address')
+        return
+    }
 
-        try {
-            setSubmitting(true)
-            await register({
-                firstName: firstName.trim(),
-                lastName: lastName.trim(),
-                email: email.trim(),
-                password
+    if (password.length < 8) {
+        setError('Password must be at least 8 characters')
+        return
+    }
+
+    try {
+        setSubmitting(true)
+        await register({
+            firstName: first,
+            lastName: last,
+            email: mail,
+            password
             })
-            navigate(redirectTo, { replace: true })
-        } catch (err){
-            setError(err.message)
-        } finally {
-            setSubmitting(false)
-        }
+        navigate(redirectTo, { replace: true })
+    } catch (err) {
+        setError(err.message)
+    } finally {
+        setSubmitting(false)
+    }
     }
 
     return (
