@@ -124,7 +124,7 @@ export default function Login() {
                 <div className="border-t border-[#D7C6B9]/50 mt-5 pt-4">
                     <p className="text-[#E8DDD3] text-[14px] font-['DM_Serif_Text'] text-center">
                         Don't have an account?
-                        <Link to="/register" className="text-blue-400 hover:underline pl-1">
+                        <Link to="/register" state={location.state} className="text-blue-400 hover:underline pl-1">
                             Register
                         </Link>
                     </p>
