@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { HiEye, HiEyeOff } from 'react-icons/hi'
+import { HiExclamationCircle } from 'react-icons/hi'
 import { useAuth } from '../../context/AuthContext.jsx'
 import logo from '../../assets/Icons/logo 1.png'
 
@@ -100,10 +101,17 @@ export default function Login() {
 
                      {/* ---------- Error ---------- */}
                      {error && (
-                        <p role="alert" className="text-red-400 text-[13px] font-['DM_Serif_Text']">
-                            {error}
-                        </p>
-                     )}
+                        <div
+                            role="alert"
+                            className="flex items-start gap-3 rounded-lg border border-red-400/40 bg-red-500/15 px-4 py-3"
+                        >
+                            <HiExclamationCircle className="mt-0.5 shrink-0 text-red-400 text-xl" />
+
+                            <p className="text-sm leading-relaxed text-red-200 font-['DM_Serif_Text']">
+                                {error}
+                            </p>
+                        </div>
+                    )} 
 
                     <button
                         type="submit"
