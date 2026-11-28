@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
-import { HiEye, HiEyeOff } from 'react-icons/hi'
-import { HiExclamationCircle } from 'react-icons/hi'
+import { HiEye, HiEyeOff, HiExclamationCircle } from 'react-icons/hi'
 import { useAuth } from '../../context/AuthContext.jsx'
 import logo from '../../assets/Icons/logo 1.png'
 
